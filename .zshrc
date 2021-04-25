@@ -113,8 +113,8 @@ alias brewrmz='brew remove --zap'
 alias brews='brew search'
 
 #hblock
-alias hb=hblock
-alias hboff='hblock -S none -D none'
+alias adb=hblock
+alias adboff='hblock -S none -D none'
 
 #adblock                                                                        
 # alias adb=adblock                                                               
