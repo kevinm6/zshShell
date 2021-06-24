@@ -7,12 +7,19 @@ export KEYTIMEOUT=1
 
 #emulate -LR zsh   <-- RESET TO DEFAULT ZSH OPTIONS
 
+#                                SHELL PROMPT
 # Init
 setopt PROMPT_SUBST
 
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git svn
+
+precmd() {
+    vcs_info
+} 
 # Options
-vi_mode_ins=${vi_mode_ins:-'%F{blue}ⓘ %f'}
-vi_mode_cmd=${vi_mode_cmd:-'%F{yellow}⌘%f'}
+vi_mode_ins=${vi_mode_ins:-'%F{blue}-- insert --%f'}
+vi_mode_cmd=${vi_mode_cmd:-'%F{yellow}-- command --%f'}
 vi_mode_symbol="${vi_mode_ins}" #initialize mode
 
 # on keymap change, define the mode and redraw prompt
@@ -37,14 +44,14 @@ TRAPINT() {
   return $(( 128 + $1 ))
 }
 
+RPROMPT=$'$vi_mode_symbol  ⌚️ %F{white}%*%f'
+PROMPT=$'\n  %# %F{blue}%4~%f\t${vcs_info_msg_0_}\n '
+
+
 # Edit line in vim w/ ctrl-e
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line 
 
-
-#                                SHELL PROMPT
-RPROMPT=$'$vi_mode_symbol  ⌚️ %F{white}%*%f'
-PROMPT=$'\n  %#  %F{blue}%4~%f\n '
 
 # ZSH
 setopt auto_cd
@@ -103,7 +110,15 @@ alias zreload='source ~/.config/.zsh/.zshrc'
 alias edz='vim ~/.config/.zsh/.zshrc && source ~/.config/.zsh/.zshrc'
 alias edvi='vim ~/.config/vim/vimrc'
 alias ednano='vim ~/.config/nano/nanorc'
-
+alias gs='git status'
+alias gc='git commit'
+alias gcm='git commit -m' # git commit w/ message
+alias ga='git add'
+alias gaa='git add .' # git add all changes in current dir
+alias gb='git branch'
+alias gac='git add . && git commit -m'
+alias gp='git push'
+alias gb='git branch'
 alias gor='go run'
 
 # homebrew
