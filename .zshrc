@@ -95,7 +95,7 @@ plugins=(
 
 #                                  Alias
 
-# terminal
+# various terminal
 alias l='ls -al'                                                                
 alias c='clear'                                                                 
 alias '..'='cd ..'
@@ -110,6 +110,8 @@ alias zreload='source ~/.config/.zsh/.zshrc'
 alias edz='vim ~/.config/.zsh/.zshrc && source ~/.config/.zsh/.zshrc'
 alias edvi='vim ~/.config/vim/vimrc'
 alias ednano='vim ~/.config/nano/nanorc'
+
+# git
 alias gs='git status'
 alias gc='git commit'
 alias gcm='git commit -m' # git commit w/ message
@@ -119,6 +121,9 @@ alias gb='git branch'
 alias gac='git add . && git commit -m'
 alias gp='git push'
 alias gb='git branch'
+alias grm='git rm'
+
+# go
 alias gor='go run'
 
 # homebrew
