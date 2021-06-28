@@ -112,6 +112,7 @@ alias edvi='vim ~/.config/vim/vimrc'
 alias ednano='vim ~/.config/nano/nanorc'
 
 # git
+alias gi='git init'
 alias gs='git status'
 alias gc='git commit'
 alias gcm='git commit -m' # git commit w/ message
@@ -122,6 +123,7 @@ alias gac='git add . && git commit -m'
 alias gp='git push'
 alias gb='git branch'
 alias grm='git rm'
+alias gpl='git pull'
 
 # go
 alias gor='go run'
