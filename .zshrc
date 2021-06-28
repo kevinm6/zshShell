@@ -114,16 +114,19 @@ alias ednano='vim ~/.config/nano/nanorc'
 # git
 alias gi='git init'
 alias gs='git status'
+alias gf='git fetch'
 alias gc='git commit'
+alias gp='git push'
+alias gb='git branch'
+alias grm='git rm'
+alias gpl='git pull'
+alias gsw='git switch' 
 alias gcm='git commit -m' # git commit w/ message
 alias ga='git add'
 alias gaa='git add .' # git add all changes in current dir
 alias gb='git branch'
 alias gac='git add . && git commit -m'
-alias gp='git push'
-alias gb='git branch'
-alias grm='git rm'
-alias gpl='git pull'
+alias gca='git commit -a'
 
 # go
 alias gor='go run'
