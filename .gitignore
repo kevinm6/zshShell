@@ -3,6 +3,7 @@
 .zcompcache/brew_all_commands
 .zsh_sessions/
 .zcompcache/
+./.zcompcache/*
 .zcompdump
 .zshenv
 .zsh_history
