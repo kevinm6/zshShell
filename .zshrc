@@ -18,8 +18,8 @@ precmd() {
     vcs_info
 } 
 # Options
-vi_mode_ins=${vi_mode_ins:-'%F{blue}-- insert --%f'}
-vi_mode_cmd=${vi_mode_cmd:-'%F{yellow}-- command --%f'}
+vi_mode_ins=${vi_mode_ins:-'%F{blue}[ ins ]%f'}
+vi_mode_cmd=${vi_mode_cmd:-'%F{yellow}[ cmd ]%f'}
 vi_mode_symbol="${vi_mode_ins}" #initialize mode
 
 # on keymap change, define the mode and redraw prompt
