@@ -125,8 +125,7 @@ alias gcm='git commit -m' # git commit w/ message
 alias ga='git add'
 alias gaa='git add .' # git add all changes in current dir
 alias gb='git branch'
-alias gac='git add . && git commit -m'
-alias gca='git commit -a'
+alias gaac='git add . && git commit -m'
 
 # go
 alias gor='go run'
