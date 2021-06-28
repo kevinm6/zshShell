@@ -1,8 +1,8 @@
 
 .DS_Store
 .zcompcache/brew_all_commands
-.zsh_sessions/*
-.zcompcache/*
+.zsh_sessions/
+.zcompcache/
 .zcompdump
 .zshenv
 .zsh_history
