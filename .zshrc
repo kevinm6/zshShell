@@ -125,7 +125,7 @@ alias ga='git add'
 alias gaa='git add .' # git add all changes in current dir
 alias gb='git branch'
 alias gaac='git add . && git commit -m'
-
+alias gck='git checkout'
 # go
 alias gor='go run'
 
