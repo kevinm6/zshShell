@@ -107,9 +107,9 @@ alias oe='open -e'
 alias ka='killall'
 alias rmh='rm ~/.config/.zsh/.zsh_history'                                                   
 alias zreload='source ~/.config/.zsh/.zshrc'
-alias edz='vim ~/.config/.zsh/.zshrc && source ~/.config/.zsh/.zshrc'
-alias edvi='vim ~/.config/vim/vimrc'
-alias ednano='vim ~/.config/nano/nanorc'
+alias edz='cd ~/.config/.zsh/ && vim ~/.config/.zsh/.zshrc && source ~/.config/.zsh/.zshrc'
+alias edvi='cd ~/.config/vim/ && vim ~/.config/vim/vimrc'
+alias ednano='cd ~/.config/nano/ && vim ~/.config/nano/nanorc'
 
 # git
 alias gi='git init'
@@ -124,7 +124,7 @@ alias gc='git commit -m' # git commit w/ message
 alias ga='git add'
 alias gaa='git add .' # git add all changes in current dir
 alias gb='git branch'
-alias gaac='git add . && git commit -m'
+alias gac='git add . && git commit -m'
 alias gck='git checkout'
 # go
 alias gor='go run'
@@ -147,6 +147,7 @@ alias brcu='brew cu -ay'
 # hblock
 alias adb=hblock
 alias adboff='hblock -S none -D none'
+alias edadb='sudo -E vi /etc/hblock/sources.list && hblock'
 
 # adblock                                                                        
 # alias adb=adblock                                                               
