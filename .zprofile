@@ -49,7 +49,7 @@ function gacap(){
 	echo -e "\033[0m"
 	git commit -m "$msg"
 	echo "\n— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
-	echo -e "\033[0;32mGit Push\033[0m"
+	echo -e "\033[0;32mPush Changes\033[0m"
 	git push
 	echo "— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
 	echo -e "\033[0;32mGit Status\033[0m"
