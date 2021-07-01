@@ -10,6 +10,7 @@ export KEYTIMEOUT=1
 #                                SHELL PROMPT
 # Init
 setopt PROMPT_SUBST
+autoload colors
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
