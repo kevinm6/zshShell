@@ -42,12 +42,13 @@ function zBackupToDrive(){
 function gacap(){
 	git status
 	git add .
+	echo "— — — — — — — — — — — — — — — — — — — — — — — — — —"
 	echo -en "\n\033[0;33mCommit message: \033[0m \033[0;31m" && read msg
 	echo -e "\033[0m"
 	git commit -m "$msg"
-	echo
+	echo "\n— — — — — — — — — — — — — — — — — — — — — — — — — —"
 	git push
-	echo
+	echo "\n— — — — — — — — — — — — — — — — — — — — — — — — — —"
 	git status
 }	
 
