@@ -40,18 +40,21 @@ function zBackupToDrive(){
 # then commit with the given message
 # and then push to remote
 function gacap(){
+	echo -e "\033[0;32m\nGit Status\033[0m"
 	git status
 	git add .
-	echo "— — — — — — — — — — — — — — — — — — — — — — — — — —"
-	echo -en "\n\033[0;33mCommit message: \033[0m \033[0;31m" && read msg
+	echo "— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
+	echo -e "\033[0;32mCommit Changes\033[0m"
+	echo -en "\n\033[0;33m    Commit message: \033[0m \033[0;31m" && read msg
 	echo -e "\033[0m"
 	git commit -m "$msg"
-	echo "\n— — — — — — — — — — — — — — — — — — — — — — — — — —"
+	echo "\n— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
+	echo -e "\033[0;32mGit Push\033[0m"
 	git push
-	echo "\n— — — — — — — — — — — — — — — — — — — — — — — — — —"
+	echo "— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
+	echo -e "\033[0;32mGit Status\033[0m"
 	git status
 }	
-
 
 # Progress bar
 function progress-bar() {
