@@ -107,6 +107,12 @@ alias oe='open -e'
 alias ka='killall'
 alias rmh='rm ~/.config/.zsh/.zsh_history'                                                   
 alias zreload='source ~/.config/.zsh/.zshrc'
+
+# Do Not Disturb
+alias dndOn='defaults -currentHost write com.apple.notificationcenterui doNotDisturb -boolean true && killall Notification Center'
+alias dndOff='defaults -currentHost write com.apple.notificationcenterui doNotDisturb -boolean false && killall Notification Center'
+
+# editing shell & apps
 alias edz='cd ~/.config/.zsh/ && vim ~/.config/.zsh/.zshrc && source ~/.config/.zsh/.zshrc'
 alias edvi='cd ~/.config/vim/ && vim ~/.config/vim/vimrc'
 alias ednano='cd ~/.config/nano/ && vim ~/.config/nano/nanorc'
