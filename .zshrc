@@ -107,7 +107,7 @@ alias o='open'
 alias oe='open -e'
 alias ka='killall'
 alias rmh='rm ~/.config/.zsh/.zsh_history'                                                   
-alias zreload='source ~/.config/.zsh/.zshrc'
+alias ql='qlmanage -p'
 
 # Do Not Disturb
 alias dndOn='defaults -currentHost write com.apple.notificationcenterui doNotDisturb -boolean true && killall Notification Center'
@@ -117,6 +117,7 @@ alias dndOff='defaults -currentHost write com.apple.notificationcenterui doNotDi
 alias edz='cd ~/.config/.zsh/ && vim ~/.config/.zsh/.zshrc && source ~/.config/.zsh/.zshrc'
 alias edvi='cd ~/.config/vim/ && vim ~/.config/vim/vimrc'
 alias ednano='cd ~/.config/nano/ && vim ~/.config/nano/nanorc'
+alias zreload='source ~/.config/.zsh/.zshrc'
 
 # git
 alias gi='git init'
@@ -133,6 +134,7 @@ alias gaa='git add .' # git add all changes in current dir
 alias gb='git branch'
 alias gac='git add . && git commit -m'
 alias gck='git checkout'
+
 # go
 alias gor='go run'
 
