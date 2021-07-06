@@ -5,5 +5,4 @@
 ./.zcompcache/
 ./.zcompcache/*
 .zcompdump
-.zshenv
 .zsh_history
