@@ -109,16 +109,6 @@ alias ka='killall'
 alias rmh='rm ~/.config/.zsh/.zsh_history'                                                   
 alias ql='qlmanage -p'
 
-# Do Not Disturb
-alias dndOn='defaults -currentHost write com.apple.notificationcenterui doNotDisturb -boolean true && killall Notification Center'
-alias dndOff='defaults -currentHost write com.apple.notificationcenterui doNotDisturb -boolean false && killall Notification Center'
-
-# editing shell & apps
-alias edz='cd ~/.config/.zsh/ && vim ~/.config/.zsh/.zshrc && source ~/.config/.zsh/.zshrc'
-alias edvi='cd ~/.config/vim/ && vim ~/.config/vim/vimrc'
-alias ednano='cd ~/.config/nano/ && vim ~/.config/nano/nanorc'
-alias zreload='source ~/.config/.zsh/.zshrc'
-
 # git
 alias gi='git init'
 alias gs='git status'
@@ -156,7 +146,6 @@ alias brcu='brew cu -ay'
 # hblock
 alias adb=hblock
 alias adboff='hblock -S none -D none'
-alias edadb='sudo -E vi /etc/hblock/sources.list && hblock'
 
 # adblock                                                                        
 # alias adb=adblock                                                               
