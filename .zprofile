@@ -53,7 +53,7 @@ function edzp() {
 #							################ VIM #################
 
 # Vim Configuration
-function edvi() {
+function edvim() {
 	cd ~/.config/vim/
 	vi ~/.config/vim/vimrc
 	echo "\t✔ Vim Configuration updated"

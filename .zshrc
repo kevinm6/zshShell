@@ -1,4 +1,8 @@
-# K ZSH Configuration
+###########################################################################
+#########################   K ZSH Configuration   #########################
+###########################################################################
+
+
 set rtp+="$HOME/.config/vim"
 
 # Vim mode
@@ -7,7 +11,7 @@ export KEYTIMEOUT=1
 
 #emulate -LR zsh   <-- RESET TO DEFAULT ZSH OPTIONS
 
-#                                SHELL PROMPT
+#########################   SHELL PROMPT   #########################
 # Init
 setopt PROMPT_SUBST
 autoload colors
@@ -18,6 +22,7 @@ zstyle ':vcs_info:*' enable git svn
 precmd() {
     vcs_info
 } 
+
 # Options
 vi_mode_ins=${vi_mode_ins:-'%F{blue}[ ins ]%f'}
 vi_mode_cmd=${vi_mode_cmd:-'%F{yellow}[ cmd ]%f'}
@@ -53,7 +58,6 @@ PROMPT=$'\n  %# %F{blue}%4~%f\t${vcs_info_msg_0_}\n '
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line 
 
-
 # ZSH
 setopt auto_cd
 setopt auto_menu
@@ -62,7 +66,7 @@ setopt correct
 setopt vi
 setopt no_list_beep
 
-# history
+# History Configuration
 HISTSIZE=2000
 SAVEHIST=4000
 HISTFILE=$HOME/.config/.zsh/.zsh_history
@@ -82,8 +86,7 @@ if type brew &>/dev/null; then
 	compinit
 fi
 
-
-#                                 Plugins
+#########################   PLUGINS   #########################
 plugins=(
 	vim
 	brew
@@ -94,9 +97,10 @@ plugins=(
 	zsh-autosuggestions
 )
 
-#                                  Alias
 
-# various terminal
+#########################   ALIAS   #########################
+
+#### Various Terminal ####
 alias l='ls -al'                                                                
 alias c='clear'                                                                 
 alias '..'='cd ..'
@@ -109,7 +113,7 @@ alias ka='killall'
 alias rmh='rm ~/.config/.zsh/.zsh_history'                                                   
 alias ql='qlmanage -p'
 
-# git
+#### Git #### 
 alias gi='git init'
 alias gs='git status'
 alias gf='git fetch'
@@ -125,10 +129,10 @@ alias gb='git branch'
 alias gac='git add . && git commit -m'
 alias gck='git checkout'
 
-# go
+#### Go ####
 alias gor='go run'
 
-# homebrew
+#### Homebrew ####
 alias br='brew'
 alias bru='brew update'                                                  
 alias bri='brew install'                                                      
@@ -143,11 +147,10 @@ alias brrmz='brew remove --zap'
 alias brs='brew search'
 alias brcu='brew cu -ay'
 
-# hblock
+#### Hblock ####
 alias adb=hblock
 alias adboff='hblock -S none -D none'
 
-# adblock                                                                        
-# alias adb=adblock                                                               
-# alias adbon='sudo adblock --force on'                                           
-# alias adboff='sudo adblock off'                                                 
+
+######################### END K ZSH Configuration #########################
+###########################################################################
