@@ -1,5 +1,10 @@
 #########################   ALIAS   #########################
 
+#### SUFFIX ALIASES ####
+alias -s json=subl
+alias -s txt=vim
+alias -s zsh=vim
+
 #### Various Terminal ####
 alias l="ls -al"                                                                
 alias c="clear"                                                                 
@@ -12,6 +17,12 @@ alias oe="open -e"
 alias ka="killall"
 alias rmh="rm ~/.config/.zsh/.zsh_history"                                                   
 alias ql="qlmanage -p"
+
+## Top Stuff
+alias cpu='(which htop > /dev/null && htop --sort-key PERCENT_CPU) || top -o cpu'
+alias ram='(which htop > /dev/null && htop --sort-key RES) || top -o rsize'
+
+alias cppath='echo `pwd` | pbcopy'
 
 #### Git #### 
 alias gi="git init"
@@ -51,7 +62,4 @@ alias brcu="brew cu -ay"
 alias adb=hblock
 alias adboff="hblock -S none -D none"
 
-#### SUFFIX ALIASES ####
-alias -s json=subl
-alias -s txt=vim
 
