@@ -3,7 +3,6 @@
 #### SUFFIX ALIASES ####
 alias -s json=subl
 alias -s txt=vim
-alias -s zsh=vim
 
 #### Various Terminal ####
 alias l="ls -al"                                                                
