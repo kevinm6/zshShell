@@ -54,7 +54,7 @@ function preview() {
 }
 
 function ql() {
-	qlmanage -p $@
+	qlmanage -p $@ >> /dev/null 2>&1
 }
 
 #							################ VIM #################
