@@ -49,6 +49,13 @@ function edzp() {
 	echo "\t✔ Zsh Profile updated and sourced"
 }
 
+function preview() {
+	open -a Preview $1
+}
+
+function ql() {
+	qlmanage -p $@
+}
 
 #							################ VIM #################
 

@@ -3,11 +3,13 @@
 #### SUFFIX ALIASES ####
 alias -s json=subl
 alias -s txt=vim
+alias -s pdf=preview
 
 #### Various Terminal ####
 alias l="ls -al"                                                                
 alias c="clear"                                                                 
 alias ".."="cd .."
+alias "..,.."="cd ../.."
 alias :q="exit"                                                                 
 alias hh="history"                                                              
 alias oa="open -a"                                                              
