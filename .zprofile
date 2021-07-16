@@ -106,8 +106,7 @@ function gacap(){
 	else
 		msg=$@
 		echo -e "\e[0;32mCommit Changes\e[0m"
-		echo -en "\n\e[0;33m    Commit message: \e[0m $msg\e[0;31m"
-		echo -e "\e[0m"
+		echo -en "\n\e[0;33m    Commit message:\e[0m  \e[0;31m$msg\e[0m"
 	fi
 	git commit -m "$msg"
 	echo "\n— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
