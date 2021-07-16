@@ -5,7 +5,8 @@
 set rtp+="$HOME/.config/vim"
 
 # Vim mode
-bindkey -v
+bindkey '\e' vi-cmd-mode
+# Make Vi mode transitions faster (KEYTIMEOUT is in hundredths of a second)
 export KEYTIMEOUT=1
 
 #emulate -LR zsh   <-- RESET TO DEFAULT ZSH OPTIONS
@@ -53,10 +54,6 @@ RPROMPT=$'$vi_mode_symbol  ⌚️ %F{white}%*%f'
 PROMPT=$'\n  %# %F{blue}%4~%f\t${vcs_info_msg_0_}\n '
 
 
-# Edit line in vim w/ ctrl-e
-# autoload edit-command-line; zle -N edit-command-line
-# bindkey '^e' edit-command-line 
-
 # ZSH
 setopt auto_cd
 setopt auto_menu
@@ -66,8 +63,8 @@ setopt vi
 setopt no_list_beep
 
 # History Configuration
-HISTSIZE=2000
-SAVEHIST=4000
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=$HOME/.config/.zsh/.zsh_history
 setopt hist_ignore_all_dups # remove older duplicate entries from history
 setopt hist_reduce_blanks # remove superfluous blanks from history items
@@ -85,9 +82,13 @@ if type brew &>/dev/null; then
 	compinit
 fi
 
+bindkey "\e[1~" beginning-of-line
+bindkey "\e[4~" end-of-line
+
+
 #########################   PLUGINS   #########################
 plugins=(
-	vim
+	#vim
 	brew
 	man
 	osx

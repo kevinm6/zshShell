@@ -6,7 +6,7 @@ export PATH="/usr/local/bin:/usr/bin:$PATH"
 
 # Set default apps
 export EDITOR=vi
-export VISUAL=mvim
+export VISUAL=vim
 export BROWSER=Safari
 
 # Set default directories
