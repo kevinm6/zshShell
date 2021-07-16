@@ -8,6 +8,7 @@ set rtp+="$HOME/.config/vim"
 # Vim mode
 bindkey -v
 export KEYTIMEOUT=1
+:noh
 
 #emulate -LR zsh   <-- RESET TO DEFAULT ZSH OPTIONS
 
