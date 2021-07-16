@@ -1,7 +1,6 @@
 export PATH="/usr/local/bin:/usr/bin:$PATH"
 
-# Do Not Disturb
-
+## Do Not Disturb Functions
 # ON
 function dndOn() {
 	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -boolean true && 
@@ -13,28 +12,38 @@ function dndOff() {
 	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -boolean false && 
 	killall Notification Center
 }
+## End Do Not Disturb Functions
 
+# open given files in Preview.app
+function preview() {
+	open -a Preview $@
+}
 
-# open new window with given url in Safari
-function Safari {                                                               
-# Will open a New Safari window with argument 1.                              
-osascript <<EOD                                                                 
-	tell application "Safari" to make new document with properties {URL:"$1"}
-	return
-EOD
+# open given files in QuickLook w/o errors
+function ql() {
+	qlmanage -p $@ >> /dev/null 2>&1
+}
+
+# open given urls in Safari
+function safari {
+	open -a Safari $@
 }
 
 
-# get version of app
+# get version of a given app
 function version(){
-	appVersion=$(defaults read $1/Contents/Info.plist CFBundleShortVersionString)
-	echo -e "\t↳  $(basename $1)  ->  \e[0;32m$appVersion\e[0m"
+	for ap in $@; do
+		appVersion=$(defaults read /$ap/Contents/Info.plist CFBundleShortVersionString)
+		echo -e "\t↳  $(basename $ap)  ->  \e[0;32m$appVersion\e[0m"
+	done
 }
 
+# open and import image to Photos.app
+function photos() {
+	open -a Photos $@
+}
 
-#							################ ZSH #################
-
-# Zsh Configuration
+## Zsh Functions
 function edz() {
 	cd ~/.config/.zsh/
 	vi ~/.config/.zsh/.zshrc &&
@@ -49,43 +58,36 @@ function edzp() {
 	echo "\t✔ Zsh Profile updated and sourced"
 }
 
-function preview() {
-	open -a Preview $1
-}
+## END Zsh Functions
 
-function ql() {
-	qlmanage -p $@ >> /dev/null 2>&1
-}
 
-#							################ VIM #################
-
-# Vim Configuration
+## Vim Functions
 function edvim() {
 	cd ~/.config/vim/
 	vi ~/.config/vim/vimrc
 	echo "\t✔ Vim Configuration updated"
 }
+## END Vim Functions
 
 
-#							################ NANO #################
-# Nano Configuration 
+## Nano Functions 
 function ednano() {
 	cd ~/.config/nano/
 	vi ~/.config/nano/nanorc &&
 	source ~/.config/nano/nanorc
 	echo "\t✔ Nano Configuration updated and sourced"
 }
+## END Nano Functions
 
-
-#							################ ADBLOCK (HBLOCK) #################
+## AdBlock Functions (hBlock)
 function edadb() {
 	sudo -E vi /etc/hblock/sources.list &&
 	hblock
 }
+## END AdBlock Configuration
 
 
-#							################ GIT #################
-# Git Configuration
+## Git Functions
 
 # Git add current dir changes
 # then commit with the given message
@@ -105,7 +107,8 @@ function gacap(){
 	echo "— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
 	echo -e "\033[0;32mGit Status\033[0m"
 	git status
-}	
+}
+## END Git Functions
 
 # Progress bar
 function progress-bar() {
