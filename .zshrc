@@ -8,7 +8,6 @@ set rtp+="$HOME/.config/vim"
 # Vim mode
 bindkey -v
 export KEYTIMEOUT=1
-:noh
 
 #emulate -LR zsh   <-- RESET TO DEFAULT ZSH OPTIONS
 
@@ -56,8 +55,8 @@ PROMPT=$'\n  %# %F{blue}%4~%f\t${vcs_info_msg_0_}\n '
 
 
 # Edit line in vim w/ ctrl-e
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line 
+# autoload edit-command-line; zle -N edit-command-line
+# bindkey '^e' edit-command-line 
 
 # ZSH
 setopt auto_cd
