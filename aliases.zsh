@@ -17,7 +17,6 @@ alias o="open"
 alias oe="open -e"
 alias ka="killall"
 alias rmh="rm ~/.config/.zsh/.zsh_history"                                                   
-alias ql="qlmanage -p"
 
 ## Top Stuff
 alias cpu='(which htop > /dev/null && htop --sort-key PERCENT_CPU) || top -o cpu'
@@ -40,6 +39,8 @@ alias gaa="git add ." # git add all changes in current dir
 alias gb="git branch"
 alias gac="git add . && git commit -m"
 alias gck="git checkout"
+alias gdf="git diff"
+alias gdt="git difftool"
 
 #### Go ####
 alias gor="go run"
