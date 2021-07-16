@@ -43,21 +43,21 @@ function photos() {
 	open -a Photos $@
 }
 
+
 ## Zsh Functions
 function edz() {
 	cd ~/.config/.zsh/
 	vi ~/.config/.zsh/.zshrc &&
 	source ~/.config/.zsh/.zshrc
-	echo "\t✔ Zsh Configuration updated and sourced"
+	echo -e "\t\e[0;32m✔\e[0m  Zsh Configuration updated and sourced"
 }
 
 function edzp() {
 	cd ~/.config/.zsh/
 	vi ~/.config/.zsh/.zprofile &&
 	source ~/.config/.zsh/.zprofile
-	echo "\t✔ Zsh Profile updated and sourced"
+	echo -e "\t\e[0;32m✔\e[0m  Zsh Profile updated and sourced"
 }
-
 ## END Zsh Functions
 
 
@@ -65,7 +65,7 @@ function edzp() {
 function edvi() {
 	cd ~/.config/vim/
 	vi ~/.config/vim/vimrc
-	echo "\t✔ Vim Configuration updated"
+	echo -e "\t\e[0;32m✔\e[0m Vim Configuration updated"
 }
 ## END Vim Functions
 
@@ -75,7 +75,7 @@ function ednano() {
 	cd ~/.config/nano/
 	vi ~/.config/nano/nanorc &&
 	source ~/.config/nano/nanorc
-	echo "\t✔ Nano Configuration updated and sourced"
+	echo -e "\t\e[0;32m✔\e[0m Nano Configuration updated and sourced"
 }
 ## END Nano Functions
 
@@ -93,19 +93,28 @@ function edadb() {
 # then commit with the given message
 # and then push to remote
 function gacap(){
-	echo -e "\033[0;32m\nGit Status\033[0m"
+	echo -e "\e[0;32m\nGit Status\e[0m"
 	git status
 	git add .
 	echo "— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
-	echo -e "\033[0;32mCommit Changes\033[0m"
-	echo -en "\n\033[0;33m    Commit message: \033[0m \033[0;31m" && read msg
-	echo -e "\033[0m"
+	msg=
+	if [ -z $@ ]
+	then
+		echo -e "\e[0;32mCommit Changes\e[0m"
+		echo -en "\n\e[0;33m    Commit message: \e[0m \e[0;31m" && read msg
+		echo -e "\e[0m"
+	else
+		msg=$@
+		echo -e "\e[0;32mCommit Changes\e[0m"
+		echo -en "\n\e[0;33m    Commit message: \e[0m $msg\e[0;31m"
+		echo -e "\e[0m"
+	fi
 	git commit -m "$msg"
 	echo "\n— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
-	echo -e "\033[0;32mPush Changes\033[0m"
+	echo -e "\e[0;32mPush Changes\033[0m"
 	git push
 	echo "— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
-	echo -e "\033[0;32mGit Status\033[0m"
+	echo -e "\e[0;32mGit Status\e[0m"
 	git status
 }
 ## END Git Functions
