@@ -17,14 +17,13 @@ alias o="open"
 alias oe="open -e"
 alias ka="killall"
 alias rmh="rm ~/.config/.zsh/.zsh_history"                                                   
-alias zpath="cd ~/.config/.zsh/"
-alias vipath="cd ~/.config/vim/"
+alias zpath="~/.config/.zsh/"
+alias vipath="~/.config/vim/"
+alias cppath='echo `pwd` | pbcopy'
 
 ## Top Stuff
 alias cpu='(which htop > /dev/null && htop --sort-key PERCENT_CPU) || top -o cpu'
 alias ram='(which htop > /dev/null && htop --sort-key RES) || top -o rsize'
-
-alias cppath='echo `pwd` | pbcopy'
 
 #### Git #### 
 alias gi="git init"
