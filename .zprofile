@@ -111,7 +111,7 @@ function gac() {
 	msg=""
 	echo -en "\n\e[0;33m    Commit message: \e[0m \e[0;31m" && read msg
 	git commit -m $msg
-	echo -e "\e[0m"
+	echo -e "\e[0m\n"
 }
 
 # Git add current dir changes
