@@ -41,7 +41,6 @@ alias gc="git commit -m" # git commit w/ message
 alias ga="git add"
 alias gaa="git add ." # git add all changes in current dir
 alias gb="git branch"
-alias gac="git add $(read) && git commit -m $(read)" # git add all in dir and commit /w msg
 alias gck="git checkout"
 alias gdf="git diff"
 alias gdt="git difftool"
