@@ -118,9 +118,7 @@ function gac() {
 			git commit -m $msg
 }
 
-# Git add current dir changes
-# then commit with the given message
-# and then push to remote
+# Git add current dir changes, commit and push
 function gacap(){
 	echo -e "\e[0;32m\nGit Status\e[0m"
 	git status
