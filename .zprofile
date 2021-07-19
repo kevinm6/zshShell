@@ -7,15 +7,17 @@ export PATH="/usr/local/bin:/usr/bin:$PATH"
 ## ----------------------  DO NOT DISTURB  -------------------------
 # ON
 function dndOn() {
-	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -boolean true && 
-		killall Notification Center
-	}
+	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -bool true
+	killall "Notification Center"
+	echo -e "\t\e[0;32m✔\e[0m Do Not Disturn enabled"
+}
 
 # OFF
 function dndOff() {
-	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -boolean false && 
-		killall Notification Center
-	}
+	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -bool false
+	killall "Notification Center"
+	echo -e "\t\e[0;32m✔\e[0m Do Not Disturn disabled"
+}
 ##
 
 ## ----------------------  macOS APPS  -------------------------
