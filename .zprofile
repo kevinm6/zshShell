@@ -102,22 +102,20 @@ function edadb() {
 
 # git add all in dir and commit /w msg
 function gac() {
-	# ******** manage error files ***********
 	if [ -z $@ ]
 	then
 		echo "⚠️  Error, No given files!"
 		return
 	fi
 
-	if git add $@
+	if !(git add $@)
 		then
+			return
+	fi
 			msg=""
 			echo -en "\n\e[0;33m    Commit message: \e[0m \e[0;31m" && read msg
 			echo -e "\e[0m\n"
 			git commit -m $msg
-	else 
-		return
-	fi
 }
 
 # Git add current dir changes
