@@ -123,8 +123,8 @@ bindkey "^[[1;5C" forward-word
 # }
 
 # Get alias file and if doesn't exist report error
-if [ -f "/Users/Kevin/Documents/ Devices/File di Backup/Shell/.zsh/aliases.zsh" ]; then
-	source "/Users/Kevin/Documents/ Devices/File di Backup/Shell/.zsh/aliases.zsh"
+if [ -f "/Users/Kevin/Documents/Devices/Backup_Files/Shell/.zsh/aliases.zsh" ]; then
+	source "/Users/Kevin/Documents/Devices/Backup_Files/Shell/.zsh/aliases.zsh"
 else
 	echo "⚠️  Alias File not found!"
 fi

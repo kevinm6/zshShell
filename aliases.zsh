@@ -23,6 +23,7 @@ alias rmh="rm ~/.config/.zsh/.zsh_history"
 alias zpath="~/.config/.zsh/"
 alias vipath="~/.config/vim/"
 alias cppath="echo `pwd` | pbcopy"
+alias backupshellpath='~/Documents/Devices/Backup_Files/Shell/'
 
 # ------------------------- HTOP STUFF -------------------------
 alias cpu="(which htop > /dev/null && htop --sort-key PERCENT_CPU) || top -o cpu"
