@@ -102,7 +102,7 @@ function edadb() {
 
 ## ----------------------  GIT  -------------------------
 
-# git add all in dir and commit /w msg
+# git add files in dir and commit /w msg
 function gac() {
 	if [ -z $@ ]
 	then
@@ -110,14 +110,13 @@ function gac() {
 		return
 	fi
 
-	if !(git add $@)
-		then
-			return
+	if (git add "$@")
+	then
+		msg=""
+		echo -en "\n\e[0;33m    Commit message: \e[0m \e[0;31m" && read msg
+		echo -e "\e[0m\n"
+		git commit -m $msg
 	fi
-			msg=""
-			echo -en "\n\e[0;33m    Commit message: \e[0m \e[0;31m" && read msg
-			echo -e "\e[0m\n"
-			git commit -m $msg
 }
 
 # Git add current dir changes, commit and push
