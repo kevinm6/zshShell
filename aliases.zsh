@@ -6,6 +6,7 @@
 # ------------------------- SUFFIX ALIASES -------------------------
 alias -s json=subl
 alias -s txt=vim
+alias -s md=vim
 alias -s pdf=preview
 
 # ------------------------- VARIOUS TERMINAL -------------------------
