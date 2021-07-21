@@ -22,19 +22,9 @@ function dndOff() {
 
 ## ----------------------  macOS APPS  -------------------------
 
-# open given files in Preview.app
-function preview() {
-	open -a Preview $@
-}
-
 # open given files in QuickLook w/o errors
 function ql() {
 	qlmanage -p $@ >> /dev/null 2>&1
-}
-
-# open given urls in Safari
-function safari {
-	open -a Safari $@
 }
 
 
@@ -44,11 +34,6 @@ function version(){
 		appVersion=$(defaults read /$ap/Contents/Info.plist CFBundleShortVersionString)
 		echo -e "\t↳  $(basename $ap)  ->  \e[0;32m$appVersion\e[0m"
 	done
-}
-
-# open and import image to Photos.app
-function photos() {
-	open -a Photos $@
 }
 
 ##
