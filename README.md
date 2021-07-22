@@ -1,6 +1,6 @@
 # ZSH Configuration
 
-## All zsh configuration files in use.
+## All zsh configuration files
 
 **Build 200721**
 
