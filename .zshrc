@@ -77,7 +77,7 @@ setopt append_history # add to main history instead of overwrite it
 setopt hist_save_no_dups # do not save duplicates
 
 # Basic auto/tab complete
-autoload -U compinit
+autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select # select completions with arrow keys
 
 if type brew &>/dev/null; then
