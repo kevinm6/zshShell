@@ -25,7 +25,7 @@ alias rmh="rm ~/.config/.zsh/.zsh_history"
 alias zpath="~/.config/.zsh/"
 alias vipath="~/.config/vim/"
 alias cppath="echo `pwd` | pbcopy"
-alias binbackuppath="~/Documents/Devices/Backup_Files/Shell/"
+alias binbackuppath="~/Documents/Devices/Backup_Files/Shell/bin/"
 alias zreload="source $ZDOTDIR"
 alias vi=vim
 
