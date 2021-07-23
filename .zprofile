@@ -11,14 +11,15 @@ export PATH="/usr/local/bin:/usr/bin:$PATH"
 # ON
 function dndOn() {
 	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -bool true
-	killall "Notification Center"
+	killall "NotificationCenter"
 	echo -e "\t\e[0;32m✔\e[0m Do Not Disturn enabled"
 }
+##
 
 # OFF
 function dndOff() {
 	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -bool false
-	killall "Notification Center"
+	killall "NotificationCenter"
 	echo -e "\t\e[0;32m✔\e[0m Do Not Disturn disabled"
 }
 ##
@@ -29,7 +30,7 @@ function dndOff() {
 function ql() {
 	qlmanage -p $@ >> /dev/null 2>&1
 }
-
+##
 
 # get version of a given app
 function version(){
@@ -56,7 +57,7 @@ function edz() {
 			source ~/.config/.zsh/.zprofile
 					echo -e "\t\e[0;32m✔\e[0m  Zsh Profile updated and sourced"
 				}
-			## END Zsh Functions
+## END Zsh Functions
 
 
 ## ---------------------- VIM -------------------------
@@ -77,7 +78,7 @@ function ednano() {
 		source ~/.config/nano/nanorc
 			echo -e "\t\e[0;32m✔\e[0m Nano Configuration updated and sourced"
 		}
-	##
+##
 
 ## ---------------------- ADBLOCK  -------------------------
 #AdBlock Functions (hBlock)
@@ -89,7 +90,6 @@ function edadb() {
 
 
 ## ----------------------  GIT  -------------------------
-
 # git add files in dir and commit /w msg
 function gac() {
 	if [ -z $@ ]
@@ -106,8 +106,9 @@ function gac() {
 		git commit -m $msg
 	fi
 }
+##
 
-# Git add current dir changes, commit and push
+## Git add current dir changes, commit and push
 function gacap(){
 	echo -e "\e[0;32m\nGit Status\e[0m"
 	git status

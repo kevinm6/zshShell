@@ -27,6 +27,7 @@ alias vipath="~/.config/vim/"
 alias cppath="echo `pwd` | pbcopy"
 alias backupshellpath="~/Documents/Devices/Backup_Files/Shell/"
 alias zreload="source $ZDOTDIR"
+alias vi=vim
 
 # ------------------------- APPS -------------------------
 alias preview="open -a Preview"
