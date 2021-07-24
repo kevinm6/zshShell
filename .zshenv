@@ -11,7 +11,7 @@ export PATH="/usr/local/bin:/usr/bin:$PATH"
 #export DISPLAY="DISPLAY 0.0"
 
 # Set default apps
-export EDITOR=vi
+export EDITOR=vim
 export VISUAL=vim
 export BROWSER=Safari
 
@@ -25,6 +25,6 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
 # Source zsh highlight
-export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/usr/local/share/zsh-syntax-highlighting/highlighters
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="usr/local/share/zsh-syntax-highlighting/highlighters"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
