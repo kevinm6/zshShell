@@ -9,7 +9,7 @@ export PATH="/usr/local/bin:/usr/bin:$PATH"
 
 ## ----------------------  DO NOT DISTURB  -------------------------
 # ON
-function dndOn() {
+dndOn() {
 	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -bool true
 	killall "NotificationCenter"
 	echo -e "\t\e[0;32m✔\e[0m Do Not Disturn enabled"
@@ -17,7 +17,7 @@ function dndOn() {
 ##
 
 # OFF
-function dndOff() {
+dndOff() {
 	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -bool false
 	killall "NotificationCenter"
 	echo -e "\t\e[0;32m✔\e[0m Do Not Disturn disabled"
@@ -27,13 +27,13 @@ function dndOff() {
 ## ----------------------  macOS APPS  -------------------------
 
 # open given files in QuickLook w/o errors
-function ql() {
+ql() {
 	qlmanage -p $@ >> /dev/null 2>&1
 }
 ##
 
 # get version of a given app
-function version(){
+version(){
 	for ap in $@; do
 		appVersion=$(defaults read /$ap/Contents/Info.plist CFBundleShortVersionString)
 		echo -e "\t↳  $(basename $ap)  ->  \e[0;32m$appVersion\e[0m"
@@ -44,14 +44,14 @@ function version(){
 
 ## ----------------------  ZSH  -------------------------
 
-function edz() {
+edz() {
 	cd ~/.config/.zsh/
 	vi ~/.config/.zsh/.zshrc &&
 		source ~/.config/.zsh/.zshrc
 			echo -e "\t\e[0;32m✔\e[0m  Zsh Configuration updated and sourced"
 		}
 
-	function edzp() {
+edzp() {
 		cd ~/.config/.zsh/
 		vi ~/.config/.zsh/.zprofile &&
 			source ~/.config/.zsh/.zprofile
@@ -62,7 +62,7 @@ function edz() {
 
 ## ---------------------- VIM -------------------------
 
-function edvi() {
+edvi() {
 	cd ~/.config/vim/
 	vi ~/.config/vim/vimrc
 	echo -e "\t\e[0;32m✔\e[0m Vim Configuration updated"
@@ -72,7 +72,7 @@ function edvi() {
 
 ## ---------------------- NANO  -------------------------
 
-function ednano() {
+ednano() {
 	cd ~/.config/nano/
 	vi ~/.config/nano/nanorc &&
 		source ~/.config/nano/nanorc
@@ -82,7 +82,7 @@ function ednano() {
 
 ## ---------------------- ADBLOCK  -------------------------
 #AdBlock Functions (hBlock)
-function edadb() {
+edadb() {
 	sudo -E vi /etc/hblock/sources.list &&
 		hblock
 	}
@@ -91,7 +91,7 @@ function edadb() {
 
 ## ----------------------  GIT  -------------------------
 # git add files in dir and commit /w msg
-function gac() {
+gac() {
 	if [ -z $@ ]
 	then
 		echo "⚠️  Error, No given files!"
@@ -109,7 +109,7 @@ function gac() {
 ##
 
 ## Git add current dir changes, commit and push
-function gacap(){
+gacap(){
 	echo -e "\e[0;32m\nGit Status\e[0m"
 	git status
 	git add .
@@ -136,7 +136,7 @@ function gacap(){
 ##
 
 ## ---------------------- PROGRESS BAR -------------------------
-function progress-bar() {
+progress-bar() {
 	local duration=${1}
 
 	already_done() { for ((done=0; done<$elapsed; done++)); do printf "▇"; done }
