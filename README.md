@@ -2,7 +2,7 @@
 
 ## All zsh configuration files
 
-**Build 200721**
+**Build 280721**
 
 | Files |
 | ----------- |
