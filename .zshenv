@@ -2,29 +2,31 @@
 #-----------------------  ZSHENV  --------------------------#
 #############################################################
 
-## Build 200721
+## Build 280721
 
 #Exports
 export SHELL=/bin/zsh
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/bin:/usr/bin:$PATH"
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+
 #export DISPLAY="DISPLAY 0.0"
 
 # Set default apps
-export EDITOR=vim
+export EDITOR=vi
 export VISUAL=vim
 export BROWSER=Safari
 
 # Set default directories
-export ZDOTDIR="$HOME/.config/.zsh/"
-export VIMINIT="source $HOME/.config/vim/vimrc"
+export ZDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/.zsh/"
+export VIMINIT="source $HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"
 export NANOINIT="source $HOME/.config/nano/nanorc"
 
-# Set default paths
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export PATH="/usr/local/opt/curl/bin:$PATH"
+# appending to path
+# java
+export PATH=/usr/local/opt/openjdk/bin:$PATH
+# curl
+export PATH=/usr/local/opt/curl/bin:$PATH
 
 # Source zsh highlight
-export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=usr/local/share/zsh-syntax-highlighting/highlighters
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/local/share/zsh-syntax-highlighting/highlighters/"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 

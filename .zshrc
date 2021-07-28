@@ -4,7 +4,7 @@
 
 # Build 200721
 
-set rtp+="/Users/Kevin/.config/vim/"
+set rtp+="$HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"
 
 # Vim mode
 bindkey -v # enable vi mode and set it to main
@@ -67,9 +67,9 @@ setopt vi
 setopt no_list_beep
 
 # ------------------------- HISTORY CONFIGURATION ------------------------- {
-HISTSIZE=2000
-SAVEHIST=4000
-HISTFILE=$HOME/.config/.zsh/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=$HOME/Documents/Devices/Backup_Files/Shell/.zsh/.zsh_history
 setopt hist_ignore_all_dups # remove older duplicate entries from history
 setopt hist_reduce_blanks # remove superfluous blanks from history items
 setopt share_history # share shell history between different shells
@@ -110,6 +110,8 @@ bindkey -M vicmd "k" vi-up-line-or-history
 # cmd
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
+bindkey "<leader>\033b" backward-word
+bindkey "<leader>\033f" forward-word
 
 # alt
 bindkey "\033b" backward-word
@@ -124,8 +126,8 @@ bindkey "^[[1;5C" forward-word
 # }
 
 # Get alias file and if doesn't exist report error
-if [ -f "/Users/Kevin/Documents/Devices/Backup_Files/Shell/.zsh/aliases.zsh" ]; then
-	source "/Users/Kevin/Documents/Devices/Backup_Files/Shell/.zsh/aliases.zsh"
+if [ -f $HOME/.config/.zsh/aliases.zsh ]; then
+	source $HOME/.config/.zsh/aliases.zsh
 else
 	echo "⚠️  Alias File not found!"
 fi

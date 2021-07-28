@@ -2,17 +2,14 @@
 #----------------------  ZPROFILE  -------------------------#
 #############################################################
 
-## Build 200721
-
-export PATH="/usr/local/bin:/usr/bin:$PATH"
-
+## Build 280721
 
 ## ----------------------  DO NOT DISTURB  -------------------------
 # ON
 dndOn() {
 	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -bool true
 	killall "NotificationCenter"
-	echo -e "\t\e[0;32m✔\e[0m Do Not Disturn enabled"
+	echo -e "\t\e[0;32m✔\e[0m Do Not Disturb enabled"
 }
 ##
 
@@ -20,7 +17,7 @@ dndOn() {
 dndOff() {
 	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -bool false
 	killall "NotificationCenter"
-	echo -e "\t\e[0;32m✔\e[0m Do Not Disturn disabled"
+	echo -e "\t\e[0;32m✔\e[0m Do Not Disturb disabled"
 }
 ##
 
