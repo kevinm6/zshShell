@@ -58,23 +58,15 @@ PROMPT=$'\n  %# %F{blue}%4~%f\t${vcs_info_msg_0_}\n '
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line 
 
-# Options
-setopt auto_cd
-setopt auto_menu
-setopt auto_list
-setopt correct
-setopt vi
-setopt no_list_beep
+# Source options file
+[[ -a $ZDOTDIR/options.zsh ]] &&	source $ZDOTDIR/options.zsh || 
+		echo "\t ⚠️   Options File not found!"
 
 # ------------------------- HISTORY CONFIGURATION ------------------------- {
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=$HOME/Documents/Devices/Backup_Files/Shell/.zsh/.zsh_history
-setopt hist_ignore_all_dups # remove older duplicate entries from history
-setopt hist_reduce_blanks # remove superfluous blanks from history items
-setopt share_history # share shell history between different shells
-setopt append_history # add to main history instead of overwrite it
-setopt hist_save_no_dups # do not save duplicates
+HISTFILE="$ZDOTDIR/.zsh_history"
+
 
 # Basic auto/tab complete
 autoload -Uz compinit && compinit
@@ -99,38 +91,11 @@ plugins=(
 )
 # }
 
+# Source bindkey file
+[[ -a $ZDOTDIR/binds.zsh ]] && source $ZDOTDIR/binds.zsh ||
+		echo "\t ⚠️  Bindkey File not found!"
 
+# Source aliases file
+[[ -a $ZDOTDIR/aliases.zsh ]] && source $ZDOTDIR/aliases.zsh || 
+		echo "\t ⚠️  Alias File not found!"
 
-# ------------------------- BINDKEYS ------------------------- {
-
-# vi mode
-bindkey -M vicmd "j" vi-down-line-or-history
-bindkey -M vicmd "k" vi-up-line-or-history
-
-# cmd
-bindkey "^[[H" beginning-of-line
-bindkey "^[[F" end-of-line
-bindkey "<leader>\033b" backward-word
-bindkey "<leader>\033f" forward-word
-
-# alt
-bindkey "\033b" backward-word
-bindkey "\033f" forward-word
-
-# ctrl
-bindkey "^u" backward-kill-line
-bindkey "^w" backward-kill-word
-bindkey "^[[1;5D" backward-word
-bindkey "^[[1;5C" forward-word
-
-# }
-
-# Get alias file and if doesn't exist report error
-if [ -f $HOME/.config/.zsh/aliases.zsh ]; then
-	source $HOME/.config/.zsh/aliases.zsh
-else
-	echo "⚠️  Alias File not found!"
-fi
-
-######################### END K ZSH Configuration #########################
-###########################################################################
