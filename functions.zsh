@@ -89,19 +89,17 @@ edadb() {
 ## ----------------------  GIT  -------------------------
 # git add files in dir and commit /w msg
 gac() {
-	if [ -z $@ ]
+	if [[ -z $@ ]]
 	then
 		echo "⚠️  Error, No given files!"
 		return
 	fi
-
-	if (git add "$@")
-	then
+	git add ${@} &&
 		msg=""
 		echo -en "\n\e[0;33m    Commit message: \e[0m \e[0;31m" && read msg
 		echo -e "\e[0m\n"
-		git commit -m $msg
-	fi
+		git commit -m $msg ||
+			echo "⚠️  Error "
 }
 ##
 
