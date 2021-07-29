@@ -17,6 +17,7 @@ export BROWSER=Safari
 
 # Set default directories
 export ZDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/.zsh/"
+export VIM="$HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"
 export VIMINIT="source $HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"
 export NANOINIT="source $HOME/.config/nano/nanorc"
 
