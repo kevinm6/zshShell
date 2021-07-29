@@ -2,7 +2,7 @@
 #------------------------  ALIAS  --------------------------#
 #############################################################
 
-# Build 200721
+# Build 290721
 
 # ------------------------- SUFFIX ALIASES -------------------------
 alias -s json=subl
@@ -21,8 +21,8 @@ alias oa="open -a"
 alias o="open"
 alias oe="open -e"
 alias ka="killall"
-alias rmh="rm $HOME/.config/.zsh/.zsh_history"
-alias zpath="$HOME/Documents/Devices/Backup_Files/Shell/.zsh/"
+alias rmh="rm $ZDOTDIR/.zsh_history"
+alias zpath="$ZDOTDIR"
 alias vipath="$HOME/Documents/Devices/Backup_Files/Shell/vim/"
 alias cppath="echo `pwd` | pbcopy"
 alias binbackuppath="$HOME/Documents/Devices/Backup_Files/Shell/bin/"
