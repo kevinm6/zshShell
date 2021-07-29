@@ -58,16 +58,18 @@ PROMPT=$'\n  %# %F{blue}%4~%f\t${vcs_info_msg_0_}\n '
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line 
 
+# Source other configuration files stored in ZDOTDIR on iCloud Drive
+typeset -A sources
 sources=(
-	$ZDOTDIR/options.zsh
-	$ZDOTDIR/binds.zsh
-	$ZDOTDIR/aliases.zsh
-	$ZDOTDIR/functions.zsh
+	[Options]="$ZDOTDIR/options.zsh"
+	[Bindkeys]="$ZDOTDIR/binds.zsh"
+	[Aliases]="$ZDOTDIR/aliases.zsh"
+	[Functions]="$ZDOTDIR/functions.zsh"
 )
 
-for source in $sources; do
-	[[ -a $source ]] && 
-		source $source || echo "\t ⚠️  $source File not found!"
+for key value in ${(kv)sources}; do
+	[[ -a $value ]] && 
+		source $value || echo "\t ⚠️  $key File not found!"
 done
 
 
