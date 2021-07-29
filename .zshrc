@@ -58,9 +58,18 @@ PROMPT=$'\n  %# %F{blue}%4~%f\t${vcs_info_msg_0_}\n '
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line 
 
-# Source options file
-[[ -a $ZDOTDIR/options.zsh ]] &&	source $ZDOTDIR/options.zsh || 
-		echo "\t ⚠️   Options File not found!"
+sources=(
+	$ZDOTDIR/options.zsh
+	$ZDOTDIR/binds.zsh
+	$ZDOTDIR/aliases.zsh
+	$ZDOTDIR/functions.zsh
+)
+
+for source in $sources; do
+	[[ -a $source ]] && 
+		source $source || echo "\t ⚠️  $source File not found!"
+done
+
 
 # ------------------------- HISTORY CONFIGURATION ------------------------- {
 HISTSIZE=10000
@@ -90,12 +99,3 @@ plugins=(
 	h-autosuggestions
 )
 # }
-
-# Source bindkey file
-[[ -a $ZDOTDIR/binds.zsh ]] && source $ZDOTDIR/binds.zsh ||
-		echo "\t ⚠️  Bindkey File not found!"
-
-# Source aliases file
-[[ -a $ZDOTDIR/aliases.zsh ]] && source $ZDOTDIR/aliases.zsh || 
-		echo "\t ⚠️  Alias File not found!"
-
