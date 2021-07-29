@@ -10,3 +10,5 @@
 | **zshenv** |
 | **zprofile** |
 | **aliases** |
+| **options** |
+| **binds** |
