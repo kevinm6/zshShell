@@ -2,8 +2,9 @@
 #-----------------------  OPTIONS  -------------------------#
 #############################################################
 
-# Build 290721
+# Build 300721
 
+setopt PROMPT_SUBST
 setopt auto_cd
 setopt auto_menu
 setopt auto_list
@@ -17,4 +18,7 @@ setopt share_history # share shell history between different shells
 setopt append_history # add to main history instead of overwrite it
 setopt hist_save_no_dups # do not save duplicates
 
+autoload colors
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git svn
 
