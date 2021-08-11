@@ -2,7 +2,7 @@
 #-------------------------  K ZSH Configuration --------------------------#
 ###########################################################################
 
-# Build 300721
+# Version 30.07.21
 
 set rtp+="$HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"
 

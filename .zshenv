@@ -2,9 +2,9 @@
 #-----------------------  ZSHENV  --------------------------#
 #############################################################
 
-## Build 280721
+## Version 28.07.21
 
-#Exports
+# Exports
 export SHELL=/bin/zsh
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
 

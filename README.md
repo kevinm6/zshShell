@@ -1,14 +1,11 @@
 # ZSH Configuration
 
-## All zsh configuration files
+#### All zsh configuration files
 
-**Build 290721**
-
-| Files |
-| ----------- |
-| **zshrc** |
-| **zshenv** |
-| **zprofile** |
-| **aliases** |
-| **options** |
-| **binds** |
+| \# | **Files** | ***Version*** |
+| -- | --------------- | ----------- |
+| 1 | zshrc | *30.07.21* |
+| 2 | zshenv | *28.07.21* |
+| 3 | aliases | *29.07.21* |
+| 4 | options | *30.07.21* |
+| 5 | binds | *29.07.21* |
