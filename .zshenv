@@ -6,7 +6,7 @@
 
 # Exports
 export SHELL=/bin/zsh
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin
 
 #export DISPLAY="DISPLAY 0.0"
 
