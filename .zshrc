@@ -12,6 +12,9 @@ export KEYTIMEOUT=1 # timeout for keybinds
 
 # emulate -LR zsh   <-- RESET TO DEFAULT ZSH OPTIONS
 
+# loading zsh mv command
+autoload zmv
+
 # Edit line in vim w/ ctrl-e
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line 
@@ -60,3 +63,6 @@ plugins=(
 	h-autosuggestions
 )
 # }
+
+test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
+
