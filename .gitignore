@@ -6,3 +6,5 @@
 ./.zcompcache/*
 .zcompdump
 .zsh_history
+.zcompcache/brew_casks
+.zcompcache/brew_formulae
