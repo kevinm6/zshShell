@@ -2,7 +2,8 @@
 #-------------------------  K ZSH Configuration --------------------------#
 ###########################################################################
 
-# Version 30.07.21
+# Zsh w/o iTerm2 Integration
+# Version 18.09.21 
 
 set rtp+="$HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"
 
@@ -63,6 +64,3 @@ plugins=(
 	h-autosuggestions
 )
 # }
-
-test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
-
