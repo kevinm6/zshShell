@@ -55,6 +55,7 @@ alias gck="git checkout"
 alias gdf="git diff"
 alias gdt="git difftool"
 alias gl="git log"
+alias glo="git log --oneline"
 
 # ------------------------- GO -------------------------
 alias gor="go run"
