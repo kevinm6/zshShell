@@ -2,7 +2,7 @@
 #-------------------------  K ZSH Configuration --------------------------#
 ###########################################################################
 
-# ZSH Shell
+# ZSH_Shell
 # Version 20.09.21
 
 set rtp+="$HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"

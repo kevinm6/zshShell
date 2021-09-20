@@ -4,7 +4,6 @@
 
 # Build 20.09.21
 
-
 precmd() {
 	vcs_info
 } 
