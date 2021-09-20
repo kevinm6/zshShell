@@ -2,8 +2,8 @@
 #-------------------------  K ZSH Configuration --------------------------#
 ###########################################################################
 
-# Zsh w/o iTerm2 Integration
-# Version 18.09.21 
+# ZSH Shell
+# Version 20.09.21
 
 set rtp+="$HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"
 
@@ -21,7 +21,7 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line 
 
 # Source other configuration files stored in ZDOTDIR on iCloud Drive
-typeset -A sources
+typeset -A sources # declare sources as array
 sources=(
 	[OPTIONS]="$ZDOTDIR/options.zsh"
 	[PROMPT]="$ZDOTDIR/prompt.zsh"
@@ -64,3 +64,4 @@ plugins=(
 	h-autosuggestions
 )
 # }
+

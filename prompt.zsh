@@ -2,7 +2,7 @@
 #------------------------ PROMPT ---------------------------#
 #############################################################
 
-# Build 30.07.21
+# Build 20.09.21
 
 
 precmd() {
@@ -36,7 +36,11 @@ TRAPINT() {
 	return $(( 128 + $1 ))
 }
 
+parse_git_branch() {
+	 git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ - \1 -/'
+}
+
+setopt PROMPT_SUBST
+
 RPROMPT=$'$vi_mode_symbol  ⌚️ %F{white}%*%f'
-PROMPT=$'\n  %# %F{blue}%4~%f\t${vcs_info_msg_0_}\n '
-
-
+PROMPT=$'\n  %# %F{blue}%4~%f\t%B%F{red}$(parse_git_branch)%f%b\n '
