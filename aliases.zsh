@@ -34,6 +34,7 @@ alias vi=vim
 alias preview="open -a Preview"
 alias safari="open -a Safari"
 alias photos="open -a Photos"
+alias iina="open -a IINA"
 
 # ------------------------- HTOP STUFF -------------------------
 alias cpu="(which htop > /dev/null && htop --sort-key PERCENT_CPU) || top -o cpu"
