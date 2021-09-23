@@ -9,6 +9,7 @@ alias -s json=subl
 alias -s txt=vim
 alias -s md=vim
 alias -s pdf=preview
+alias -s m3u8=iina
 
 # ------------------------- VARIOUS TERMINAL -------------------------
 alias l="ls -al"
