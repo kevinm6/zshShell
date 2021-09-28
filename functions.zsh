@@ -2,7 +2,7 @@
 #----------------------- FUNCTIONS -------------------------#
 #############################################################
 
-## Version 29.07.21
+## Version 28.09.21
 
 ## ----------------------  DO NOT DISTURB  -------------------------
 # ON
@@ -38,6 +38,26 @@ version(){
 }
 
 ##
+
+
+## ----------------------  VOLUMES  -------------------------
+lsv() {
+	ls /Volumes/ | grep -Ev "KevinSSD 480Gb|KevinSSD support"
+}
+
+rmv() {
+	if [ -z $@ ]; then
+		ls /Volumes/ | grep -Ev "KevinSSD 480Gb|KevinSSD support|usb1_*|Cinema|Music"
+	else
+		for d in $@; do
+			diskutil umount "$d"
+		done
+	fi
+}
+
+
+## END Volumes
+
 
 ## ----------------------  ZSH  -------------------------
 
