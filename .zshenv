@@ -29,6 +29,8 @@ export NANOINIT="source $HOME/.config/nano/nanorc"
 export PATH=/usr/local/opt/openjdk/bin:$PATH
 # curl
 export PATH=/usr/local/opt/curl/bin:$PATH
+# python
+export PATH=/usr/local/opt/python/libexec/bin:$PATH
 
 # Source zsh highlight
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/local/share/zsh-syntax-highlighting/highlighters/"
