@@ -2,7 +2,7 @@
 #-----------------------  ZSHENV  --------------------------#
 #############################################################
 
-## Version 28.07.21
+## Version 30.09.21
 
 # Exports
 export SHELL=/bin/zsh
@@ -23,6 +23,8 @@ export MYVIMRC="$HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"
 export VIMINIT="source $HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"
 # NANO
 export NANOINIT="source $HOME/.config/nano/nanorc"
+# PYTHON
+export PYTHON="/usr/local/opt/python/libexec/bin/python"
 
 # appending to path
 # java
