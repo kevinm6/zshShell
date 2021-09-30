@@ -29,6 +29,7 @@ alias cppath="echo `pwd` | pbcopy"
 alias binbackuppath="$HOME/Documents/Devices/Backup_Files/Shell/bin/"
 alias zreload="source $ZDOTDIR"
 alias vi=vim
+alias py=python
 
 # ------------------------- APPS -------------------------
 alias preview="open -a Preview"
