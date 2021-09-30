@@ -2,17 +2,17 @@
 #----------------------- BINDKEYS --------------------------#
 #############################################################
 
-# Version 29.07.21
+# Version 30.09.21
 
 # vi mode
 bindkey -M vicmd "j" vi-down-line-or-history
 bindkey -M vicmd "k" vi-up-line-or-history
 
 # cmd
-bindkey "^[[H" beginning-of-line
-bindkey "^[[F" end-of-line
-bindkey "<leader>\033b" backward-word
-bindkey "<leader>\033f" forward-word
+# bindkey "^[[H" beginning-of-line
+# bindkey "^[[F" end-of-line
+# bindkey "<leader>\033b" backward-word
+# bindkey "<leader>\033f" forward-word
 
 # alt
 bindkey "\033b" backward-word
