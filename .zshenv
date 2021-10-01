@@ -36,6 +36,10 @@ export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
 export PATH=/usr/local/opt/curl/bin:$PATH
 # python
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
+# go
+export GOPATH="$HOME/.config/go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 # Source zsh highlight
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/local/share/zsh-syntax-highlighting/highlighters/"
