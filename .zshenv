@@ -28,8 +28,10 @@ export NANOINIT="source $HOME/.config/nano/nanorc"
 export PYTHON="/usr/local/opt/python/libexec/bin/python"
 
 # appending to path
-# java
-export PATH=/usr/local/opt/openjdk/bin:$PATH
+# java -> setting java11 as default
+export PATH=/usr/local/opt/openjdk@11/bin:$PATH
+export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
+
 # curl
 export PATH=/usr/local/opt/curl/bin:$PATH
 # python
