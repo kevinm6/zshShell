@@ -25,10 +25,10 @@ alias ka="killall"
 alias rmh="rm $ZDOTDIR/.zsh_history"
 alias zpath="$ZDOTDIR"
 alias vipath="$HOME/Documents/Devices/Backup_Files/Shell/vim/"
-alias cppath="echo `pwd` | pbcopy"
+alias cppath="echo $PWD | pbcopy"
 alias binbackuppath="$HOME/Documents/Devices/Backup_Files/Shell/bin/"
 alias zreload="source $ZDOTDIR"
-alias vi=vim
+#alias vi=vim
 alias python="/usr/local/opt/python/libexec/bin/python/"
 
 # ------------------------- APPS -------------------------
@@ -42,7 +42,6 @@ alias cpu="(which htop > /dev/null && htop --sort-key PERCENT_CPU) || top -o cpu
 alias ram="(which htop > /dev/null && htop --sort-key RES) || top -o rsize"
 
 # ------------------------- GIT -------------------------
-alias gi="git init"
 alias gs="git status"
 alias gf="git fetch"
 alias gp="git push"
