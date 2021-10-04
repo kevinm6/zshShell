@@ -41,6 +41,10 @@ export GOPATH="$HOME/.config/go"
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
+# PROGRAMMAZIONE II
+export PROG2HOME="/Users/Kevin/Informatica/2°Anno/1°Semestre/Programmazione II/RepoEsercitazioni/esercitazioni"
+export PATH="$PROG2HOME/.bin:$PATH"
+
 # Source zsh highlight
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/local/share/zsh-syntax-highlighting/highlighters/"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
