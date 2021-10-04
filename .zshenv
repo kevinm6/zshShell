@@ -19,11 +19,14 @@ export BROWSER=Safari
 # Set default directories
 # ZSH 
 export ZDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/.zsh"
+
 # VIM
 export MYVIMRC="$HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"
 export VIMINIT="source $HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"
+
 # NANO
 export NANOINIT="source $HOME/.config/nano/nanorc"
+
 # PYTHON
 export PYTHON="/usr/local/opt/python/libexec/bin/python"
 
@@ -34,8 +37,10 @@ export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
 
 # curl
 export PATH=/usr/local/opt/curl/bin:$PATH
+
 # python
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
+
 # go
 export GOPATH="$HOME/.config/go"
 export GOROOT="$(brew --prefix golang)/libexec"
