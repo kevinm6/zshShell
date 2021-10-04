@@ -143,7 +143,6 @@ gsi() {
 			git commit -m $msg ||
 			echo "⚠️  Error "
 			git push -u origin main
-
 		;;
 
 		*)
