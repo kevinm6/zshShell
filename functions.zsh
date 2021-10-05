@@ -123,49 +123,6 @@ gac() {
 }
 ##
 
-# git init and start new repo
-gsi() {
-	dir=$(echo $PWD)
-	vared -p "    Do you want to start a new repo here
-    ↳ $dir (y/n)?: " -c answ	
-
-	case $answ in
-		"y"|"Y")
-			echo "\tStarting. . . "
-			git init
-			vi -o README.md .gitignore
-			echo "\n\t README and ignore files are created"
-			vared -p "    Enter GitHub url of the repository: " -repoUrl
-			git add .
-			msg=""
-			echo -en "\n\e[0;33m    Commit message: \e[0m \e[0;31m" && read msg
-			echo -e "\e[0m\n"
-			git commit -m $msg ||
-			echo "⚠️  Error "
-			git push -u origin main
-		;;
-
-		*)
-			echo "\t Cancel. . . Exit"
-		;;
-
-	esac
-	return
-
-	if [[  $@ ]]
-	then
-		echo "⚠️  Error, No given files!"
-		return
-	fi
-	git add ${@} &&
-		msg=""
-		echo -en "\n\e[0;33m    Commit message: \e[0m \e[0;31m" && read msg
-		echo -e "\e[0m\n"
-		git commit -m $msg ||
-			echo "⚠️  Error "
-}
-##
-
 
 ## Git add current dir changes, commit and push
 gacap(){
