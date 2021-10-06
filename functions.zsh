@@ -50,7 +50,7 @@ rmv() {
 		ls /Volumes/ | grep -Ev "KevinSSD 480Gb|KevinSSD support|usb1_*|Cinema|Music"
 	else
 		for d in $@; do
-			diskutil umount "$d"
+			echo "   " && diskutil umount "$d"
 		done
 	fi
 }
