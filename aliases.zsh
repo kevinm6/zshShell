@@ -2,7 +2,7 @@
 #------------------------  ALIAS  --------------------------#
 #############################################################
 
-# Version 29.07.21
+# Version 06.10.21
 
 # ------------------------- SUFFIX ALIASES -------------------------
 alias -s json=subl
@@ -28,7 +28,6 @@ alias vipath="$HOME/Documents/Devices/Backup_Files/Shell/vim/"
 alias cppath="echo $PWD | pbcopy"
 alias binbackuppath="$HOME/Documents/Devices/Backup_Files/Shell/bin/"
 alias zreload="source $ZDOTDIR"
-#alias vi=vim
 alias python="/usr/local/opt/python/libexec/bin/python/"
 
 # ------------------------- APPS -------------------------
