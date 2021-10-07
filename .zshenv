@@ -21,8 +21,9 @@ export BROWSER=Safari
 export ZDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/.zsh"
 
 # VIM
-export MYVIMRC="$HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"
-export VIMINIT="source $HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"
+export VIMDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/vim/"
+export MYVIMRC="$VIMDOTDIR/vimrc"
+export VIMINIT="source $MYVIMRC"
 
 # NANO
 export NANOINIT="source $HOME/.config/nano/nanorc"
