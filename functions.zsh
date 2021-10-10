@@ -9,7 +9,7 @@
 dndOn() {
 	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -bool true
 	killall "NotificationCenter"
-	echo -e "\t\e[0;32m✔\e[0m Do Not Disturb enabled"
+	echo -e "\t\e[32m✔\e[0m Do Not Disturb enabled"
 }
 ##
 
@@ -17,7 +17,7 @@ dndOn() {
 dndOff() {
 	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -bool false
 	killall "NotificationCenter"
-	echo -e "\t\e[0;32m✔\e[0m Do Not Disturb disabled"
+	echo -e "\t\e[32m✔\e[0m Do Not Disturb disabled"
 }
 ##
 
@@ -33,7 +33,7 @@ ql() {
 version(){
 	for ap in $@; do
 		appVersion=$(defaults read /$ap/Contents/Info.plist CFBundleShortVersionString)
-		echo -e "\t↳  $(basename $ap)  ->  \e[0;32m$appVersion\e[0m"
+		echo -e "\t↳  $(basename $ap)  ->  \e[32m$appVersion\e[0m"
 	done
 }
 
@@ -65,14 +65,14 @@ edz() {
 	cd ~/.config/.zsh/
 	vi ~/.config/.zsh/.zshrc &&
 		source ~/.config/.zsh/.zshrc
-			echo -e "\t\e[0;32m✔\e[0m  Zsh Configuration updated and sourced"
+			echo -e "\t\e[32m✔\e[0m  Zsh Configuration updated and sourced"
 		}
 
 edzp() {
 		cd ~/.config/.zsh/
 		vi ~/.config/.zsh/.zprofile &&
 			source ~/.config/.zsh/.zprofile
-					echo -e "\t\e[0;32m✔\e[0m  Zsh Profile updated and sourced"
+					echo -e "\t\e[32m✔\e[0m  Zsh Profile updated and sourced"
 				}
 ## END Zsh Functions
 
@@ -82,7 +82,7 @@ edzp() {
 edvi() {
 	cd ~/.config/vim/
 	vi ~/.config/vim/vimrc
-	echo -e "\t\e[0;32m✔\e[0m Vim Configuration updated"
+	echo -e "\t\e[32m✔\e[0m Vim Configuration updated"
 }
 ##
 
@@ -93,7 +93,7 @@ ednano() {
 	cd ~/.config/nano/
 	vi ~/.config/nano/nanorc &&
 		source ~/.config/nano/nanorc
-			echo -e "\t\e[0;32m✔\e[0m Nano Configuration updated and sourced"
+			echo -e "\t\e[32m✔\e[0m Nano Configuration updated and sourced"
 		}
 ##
 
@@ -114,39 +114,39 @@ gac() {
 		echo "⚠️  Error, No given files!"
 		return
 	fi
-	git add ${@} &&
-		msg=""
-		echo -en "\n\e[0;33m    Commit message: \e[0m \e[0;31m" && read msg
-		echo -e "\e[0m\n"
-		git commit -m $msg ||
-			echo "⚠️  Error "
+	git add ${@} && msg="" || return
+
+	echo -en "\n\e[33m    Commit message: \e[0m \e[31m" && read msg
+	echo -e "\e[0m\n"
+	git commit -m $msg ||
+		echo "⚠️  Error "
 }
 ##
 
 
 ## Git add current dir changes, commit and push
 gacap(){
-	echo -e "\e[0;32m\nGit Status\e[0m"
+	echo -e "\e[32m\nGit Status\e[0m"
 	git status
 	git add .
 	echo "— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
 	msg=""
 	if [ -z $@ ]
 	then
-		echo -e "\e[0;32mCommit Changes\e[0m"
-		echo -en "\n\e[0;33m    Commit message: \e[0m \e[0;31m" && read msg
+		echo -e "\e[32mCommit Changes\e[0m"
+		echo -en "\n\e[33m    Commit message: \e[0m \e[31m" && read msg
 		echo -e "\e[0m"
 	else
 		msg=$@
-		echo -e "\e[0;32mCommit Changes\e[0m"
-		echo -en "\n\e[0;33m    Commit message:\e[0m  \e[0;31m$msg\e[0m\n"
+		echo -e "\e[32mCommit Changes\e[0m"
+		echo -en "\n\e[33m    Commit message:\e[0m  \e[31m$msg\e[0m\n"
 	fi
 	git commit -m "$msg"
 	echo "\n— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
-	echo -e "\e[0;32mPush Changes\033[0m"
+	echo -e "\e[32mPush Changes\033[0m"
 	git push
 	echo "— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
-	echo -e "\e[0;32mGit Status\e[0m"
+	echo -e "\e[32mGit Status\e[0m"
 	git status
 }
 ##
