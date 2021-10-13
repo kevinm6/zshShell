@@ -3,7 +3,7 @@
 ###########################################################################
 
 # ZSH Shell with iTerm2
-# Version 19.09.21
+# Version 13.10.21
 
 set rtp+="$HOME/Documents/Devices/Backup_Files/Shell/vim/vimrc"
 
