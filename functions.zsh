@@ -116,7 +116,7 @@ gac() {
 	fi
 	git add ${@} && msg="" || return
 
-	echo -en "\n\e[33m    Commit message: \e[0m \e[31m" && read msg
+	echo -en "\n\e[33m    Commit message: \e[0m \e[91m" && read msg
 	echo -e "\e[0m\n"
 	git commit -m $msg ||
 		echo "⚠️  Error "
@@ -134,12 +134,12 @@ gacap(){
 	if [ -z $@ ]
 	then
 		echo -e "\e[32mCommit Changes\e[0m"
-		echo -en "\n\e[33m    Commit message: \e[0m \e[31m" && read msg
+		echo -en "\n\e[33m    Commit message: \e[0m \e[91m" && read msg
 		echo -e "\e[0m"
 	else
 		msg=$@
 		echo -e "\e[32mCommit Changes\e[0m"
-		echo -en "\n\e[33m    Commit message:\e[0m  \e[31m$msg\e[0m\n"
+		echo -en "\n\e[33m    Commit message:\e[0m  \e[91m$msg\e[0m\n"
 	fi
 	git commit -m "$msg"
 	echo "\n— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
