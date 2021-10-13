@@ -22,6 +22,7 @@ export ZDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/.zsh"
 
 # VIM
 export VIMDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/vim"
+export VIM_APP_DIR="$(brew --prefix macvim)"
 export MYVIMRC="$VIMDOTDIR/vimrc"
 export VIMINIT="source $MYVIMRC"
 
