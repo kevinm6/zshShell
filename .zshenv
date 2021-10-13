@@ -21,7 +21,7 @@ export BROWSER=Safari
 export ZDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/.zsh"
 
 # VIM
-export VIMDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/vim/"
+export VIMDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/vim"
 export MYVIMRC="$VIMDOTDIR/vimrc"
 export VIMINIT="source $MYVIMRC"
 
