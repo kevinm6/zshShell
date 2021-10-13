@@ -2,7 +2,7 @@
 #------------------------  ALIAS  --------------------------#
 #############################################################
 
-# Version 06.10.21
+# Version 13.10.21
 
 # ------------------------- SUFFIX ALIASES -------------------------
 alias -s json=subl
@@ -14,6 +14,7 @@ alias -s m3u8=iina
 # ------------------------- VARIOUS TERMINAL -------------------------
 alias l="ls -al"
 alias c="clear"
+alias cdc="cd && clear"
 alias ".."="cd .."
 alias "..,.."="cd ../.."
 alias :q="exit"
