@@ -2,7 +2,7 @@
 #------------------------  ALIAS  --------------------------#
 #############################################################
 
-# Version 13.10.21
+# Version 15.10.21 - 9:00
 
 # ------------------------- SUFFIX ALIASES -------------------------
 alias -s json=subl
@@ -40,24 +40,6 @@ alias iina="open -a IINA"
 # ------------------------- HTOP STUFF -------------------------
 alias cpu="(which htop > /dev/null && htop --sort-key PERCENT_CPU) || top -o cpu"
 alias ram="(which htop > /dev/null && htop --sort-key RES) || top -o rsize"
-
-# ------------------------- GIT -------------------------
-alias gs="git status"
-alias gf="git fetch"
-alias gp="git push"
-alias gb="git branch"
-alias grm="git rm"
-alias gpl="git pull"
-alias gsw="git switch" 
-alias gc="git commit -m" # git commit w/ message
-alias ga="git add"
-alias gaa="git add ." # git add all changes in current dir
-alias gb="git branch"
-alias gck="git checkout"
-alias gdf="git diff"
-alias gdt="git difftool"
-alias gl="git log"
-alias glo="git log --oneline"
 
 # ------------------------- GO -------------------------
 alias gor="go run"
