@@ -2,7 +2,7 @@
 #-----------------------  ZSHENV  --------------------------#
 #############################################################
 
-## Version 30.09.21
+## Version 19.10.21
 
 # Exports
 export SHELL=/bin/zsh
@@ -51,6 +51,11 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 # PROGRAMMAZIONE II
 export PROG2HOME="/Users/Kevin/Informatica/2°Anno/1°Semestre/Programmazione II/RepoEsercitazioni/esercitazioni"
 export PATH="$PROG2HOME/.bin:$PATH"
+
+# POSTGRES
+export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/postgresql@13/lib"
+export CPPFLAGS="-I/usr/local/opt/postgresql@13/include"
 
 # Source zsh highlight
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/local/share/zsh-syntax-highlighting/highlighters/"
