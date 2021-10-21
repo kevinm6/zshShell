@@ -10,6 +10,7 @@ alias -s txt=vim
 alias -s md=vim
 alias -s pdf=preview
 alias -s m3u8=iina
+alias -s todo=vim
 
 # ------------------------- VARIOUS TERMINAL -------------------------
 alias l="ls -al"
