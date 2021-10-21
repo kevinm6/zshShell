@@ -42,5 +42,5 @@ parse_git_branch() {
 setopt PROMPT_SUBST
 
 RPROMPT=$'$vi_mode_symbol  ⌚️ %F{white}%*%f'
-PROMPT=$'\n  %# %F{blue}%4~%f\t%B%F{red}$(parse_git_branch)%f%b\n '
+PROMPT=$'\n  %# %F{blue}%4~%f\t%B%F{red}⅄$(parse_git_branch)%f%b\n '
 
