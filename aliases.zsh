@@ -2,12 +2,12 @@
 #------------------------  ALIAS  --------------------------#
 #############################################################
 
-# Version 15.10.21 - 9:00
+# Version 23.10.21 - 14:00
 
 # ------------------------- SUFFIX ALIASES -------------------------
-alias -s json=subl
-alias -s txt=vim
-alias -s md=vim
+alias -s json=$VISUAL
+alias -s txt=$EDITOR
+alias -s md=$EDITOR
 alias -s pdf=preview
 alias -s m3u8=iina
 
