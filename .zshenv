@@ -2,7 +2,7 @@
 #-----------------------  ZSHENV  --------------------------#
 #############################################################
 
-## Version 19.10.21
+## Version 23.10.21 - 14:00
 
 # Exports
 export SHELL=/bin/zsh
@@ -12,6 +12,7 @@ export PATH=$PATH:/Library/Apple/usr/bin:/Users/Kevin/.local/bin/
 #export DISPLAY="DISPLAY 0.0"
 
 # Set default apps
+export XDG_CONFIG_HOME="/Users/Kevin/.config/"
 export EDITOR=nvim
 export VISUAL=vimr
 export BROWSER="/Applications/Safari.app"
@@ -20,9 +21,13 @@ export BROWSER="/Applications/Safari.app"
 # ZSH 
 export ZDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/.zsh"
 
+# NEOVIM
+export NVIMDOTDIR="$XDG_CONFIG_HOME/nvim"
+export MYNVIMRC="$NVIMDOTDIR/init.vim"
+export NVIMINIT="source $MYNVIMRC"
+
 # VIM
-export VIMDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/vim"
-export VIM_APP_DIR="$(brew --prefix macvim)"
+export VIMDOTDIR="$XDG_CONFIG_HOME/vim"
 export MYVIMRC="$VIMDOTDIR/vimrc"
 export VIMINIT="source $MYVIMRC"
 
