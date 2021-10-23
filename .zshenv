@@ -12,9 +12,9 @@ export PATH=$PATH:/Library/Apple/usr/bin:/Users/Kevin/.local/bin/
 #export DISPLAY="DISPLAY 0.0"
 
 # Set default apps
-export EDITOR=vi
-export VISUAL=vim
-export BROWSER=Safari
+export EDITOR=nvim
+export VISUAL=vimr
+export BROWSER="/Applications/Safari.app"
 
 # Set default directories
 # ZSH 
