@@ -30,7 +30,6 @@ alias vipath="$VIMDOTDIR"
 alias nvipath="$NVIMDOTDIR"
 alias cppath="echo $PWD | pbcopy"
 alias binbackpath="$HOME/Documents/Devices/Backup_Files/Shell/bin/"
-alias zreload="source ${$(ls $ZDOTDIR | grep -Ev "README.md")}"
 alias python="/usr/local/opt/python/libexec/bin/python/"
 
 # ------------------------- APPS -------------------------
