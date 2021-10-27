@@ -2,7 +2,7 @@
 #----------------------- FUNCTIONS -------------------------#
 #############################################################
 
-## Version 27.10.2021 - 10:00
+## Version 27.10.2021 - 12:20
 
 # ----------------------  DO NOT DISTURB  ------------------------- {
 
@@ -62,19 +62,24 @@ rmv() {
 
 # ----------------------  ZSH  ------------------------- {
 
-edz() {
-	cd ~/.config/.zsh/
-	vim ~/.config/.zsh/.zshrc &&
-		source ~/.config/.zsh/.zshrc
-			echo -e "\t\e[32m✔\e[0m  Zsh Configuration updated and sourced"
-		}
-
-edzp() {
+	edz() {
 		cd ~/.config/.zsh/
-		vim ~/.config/.zsh/.zprofile &&
-			source ~/.config/.zsh/.zprofile
-					echo -e "\t\e[32m✔\e[0m  Zsh Profile updated and sourced"
-				}
+		vim ~/.config/.zsh/.zshrc &&
+			source ~/.config/.zsh/.zshrc
+				echo -e "\t\e[32m✔\e[0m  Zsh Configuration updated and sourced"
+	}
+
+	edzp() {
+			cd ~/.config/.zsh/
+			vim ~/.config/.zsh/.zprofile &&
+				source ~/.config/.zsh/.zprofile
+						echo -e "\t\e[32m✔\e[0m  Zsh Profile updated and sourced"
+	}
+
+	zreload() {
+		source $ZDOTDIR/.zshrc
+	}
+
 # END Zsh Functions }
 
 
@@ -82,7 +87,7 @@ edzp() {
 
 # edit vim config file
 edvi() {
-	cd ~/$VIMDOTDIR
+	cd $VIMDOTDIR
 	vim ./vimrc && vim -c "source ./vimrc" -c "q" || echo "⚠️  Error editing file"
 	echo -e "\t\e[32m✔\e[0m Vim Configuration updated"
 }
@@ -90,7 +95,7 @@ edvi() {
 # edit neovim config file
 ednvi() {
 	cd $NVIMDOTDIR
-	vim ./init.vim && vim -c "source ./init.vim" -c "q" || echo "⚠️  Error editing file"
+	nvim ./init.vim && nvim -c "source ./init.vim" -c "q" || echo "⚠️  Error editing file"
 	echo -e "\t\e[32m✔\e[0m NeoVim Configuration updated"
 }
 #	}
