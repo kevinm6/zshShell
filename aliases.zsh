@@ -2,7 +2,7 @@
 #------------------------  ALIAS  --------------------------#
 #############################################################
 
-# Version 23.10.21 - 14:00
+# Version 27.10.21 - 10:00
 
 # ------------------------- SUFFIX ALIASES -------------------------
 alias -s json=$VISUAL
@@ -26,10 +26,11 @@ alias ka="killall"
 alias vi="nvim"
 alias rmh="rm $ZDOTDIR/.zsh_history"
 alias zpath="$ZDOTDIR"
-alias vipath="$HOME/Documents/Devices/Backup_Files/Shell/vim/"
+alias vipath="$VIMDOTDIR"
+alias nvipath="$NVIMDOTDIR"
 alias cppath="echo $PWD | pbcopy"
-alias binbackuppath="$HOME/Documents/Devices/Backup_Files/Shell/bin/"
-alias zreload="source $ZDOTDIR"
+alias binbackpath="$HOME/Documents/Devices/Backup_Files/Shell/bin/"
+alias zreload="source ${$(ls $ZDOTDIR | grep -Ev "README.md")}"
 alias python="/usr/local/opt/python/libexec/bin/python/"
 
 # ------------------------- APPS -------------------------
@@ -40,7 +41,7 @@ alias iina="open -a IINA"
 
 # ------------------------- HTOP STUFF -------------------------
 alias cpu="(which htop > /dev/null && htop --sort-key PERCENT_CPU) || top -o cpu"
-alias ram="(which htop > /dev/null && htop --sort-key RES) || top -o rsize"
+alias ram="(which htop > /dev/null && htop --sort-key PERCENT_MEM) || top -o rsize"
 
 # ------------------------- GO -------------------------
 alias gor="go run"
@@ -54,7 +55,6 @@ alias "br??"="brew info"
 alias bruu="brew update && brew upgrade"                                    
 alias brupg="brew upgrade"                                                    
 alias brc="brew cleanup"
-alias brcpa="brew cleanup --prune all"
 alias brrm="brew remove"
 alias brrmz="brew remove --zap"                                               
 alias brs="brew search"

@@ -2,7 +2,7 @@
 #-----------------------  ZSHENV  --------------------------#
 #############################################################
 
-## Version 23.10.21 - 14:00
+## Version 27.10.21 - 10:00
 
 # Exports
 export SHELL=/bin/zsh
@@ -12,7 +12,6 @@ export PATH=$PATH:/Library/Apple/usr/bin:/Users/Kevin/.local/bin/
 #export DISPLAY="DISPLAY 0.0"
 
 # Set default apps
-export XDG_CONFIG_HOME="/Users/Kevin/.config/"
 export EDITOR=nvim
 export VISUAL=vimr
 export BROWSER="/Applications/Safari.app"
@@ -20,16 +19,15 @@ export BROWSER="/Applications/Safari.app"
 # Set default directories
 # ZSH 
 export ZDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/.zsh"
+export XDG_CONFIG_HOME="/Users/Kevin/.config"
 
-# NEOVIM
-export NVIMDOTDIR="$XDG_CONFIG_HOME/nvim"
-export MYNVIMRC="$NVIMDOTDIR/init.vim"
-export NVIMINIT="source $MYNVIMRC"
+# NVIM
+export NVIMDOTDIR="$HOME/.config/nvim"
+export VIMINIT="source $NVIMDOTDIR/init.vim"
 
 # VIM
-export VIMDOTDIR="$XDG_CONFIG_HOME/vim"
+export VIMDOTDIR="$HOME/.config/vim"
 export MYVIMRC="$VIMDOTDIR/vimrc"
-export VIMINIT="source $MYVIMRC"
 
 # NANO
 export NANOINIT="source $HOME/.config/nano/nanorc"
@@ -55,7 +53,7 @@ export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 # PROGRAMMAZIONE II
 export PROG2HOME="/Users/Kevin/Informatica/2°Anno/1°Semestre/Programmazione II/RepoEsercitazioni/esercitazioni"
-export PATH="$PROG2HOME/.bin:$PATH"
+# export PATH="$PROG2HOME/.bin:$PATH"
 
 # POSTGRES
 # export PATH="/usr/local/opt/postgresql@13/bin:$PATH"

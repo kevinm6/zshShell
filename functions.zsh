@@ -2,26 +2,27 @@
 #----------------------- FUNCTIONS -------------------------#
 #############################################################
 
-## Version 28.09.21
+## Version 27.10.2021 - 10:00
 
-## ----------------------  DO NOT DISTURB  -------------------------
-# ON
+# ----------------------  DO NOT DISTURB  ------------------------- {
+
+## ON ##
 dndOn() {
 	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -bool true
 	killall "NotificationCenter"
 	echo -e "\t\e[32m✔\e[0m Do Not Disturb enabled"
 }
-##
 
-# OFF
+
+## OFF ##
 dndOff() {
 	defaults -currentHost write com.apple.notificationcenterui doNotDisturb -bool false
 	killall "NotificationCenter"
 	echo -e "\t\e[32m✔\e[0m Do Not Disturb disabled"
 }
-##
+#	}
 
-## ----------------------  macOS APPS  -------------------------
+# ----------------------  macOS APPS  ------------------------- {
 
 # open given files in QuickLook w/o errors
 ql() {
@@ -37,10 +38,10 @@ version(){
 	done
 }
 
-##
+#	}
 
 
-## ----------------------  VOLUMES  -------------------------
+# ----------------------  VOLUMES  ------------------------- {
 lsv() {
 	ls /Volumes/ | grep -Ev "KevinSSD 480Gb|KevinSSD support"
 }
@@ -56,57 +57,65 @@ rmv() {
 }
 
 
-## END Volumes
+## END Volumes }
 
 
-## ----------------------  ZSH  -------------------------
+# ----------------------  ZSH  ------------------------- {
 
 edz() {
 	cd ~/.config/.zsh/
-	vi ~/.config/.zsh/.zshrc &&
+	vim ~/.config/.zsh/.zshrc &&
 		source ~/.config/.zsh/.zshrc
 			echo -e "\t\e[32m✔\e[0m  Zsh Configuration updated and sourced"
 		}
 
 edzp() {
 		cd ~/.config/.zsh/
-		vi ~/.config/.zsh/.zprofile &&
+		vim ~/.config/.zsh/.zprofile &&
 			source ~/.config/.zsh/.zprofile
 					echo -e "\t\e[32m✔\e[0m  Zsh Profile updated and sourced"
 				}
-## END Zsh Functions
+# END Zsh Functions }
 
 
-## ---------------------- VIM -------------------------
+# ---------------------- VIM ------------------------- {
 
+# edit vim config file
 edvi() {
-	cd ~/.config/vim/
-	vi ~/.config/vim/vimrc
+	cd ~/$VIMDOTDIR
+	vim ./vimrc && vim -c "source ./vimrc" -c "q" || echo "⚠️  Error editing file"
 	echo -e "\t\e[32m✔\e[0m Vim Configuration updated"
 }
-##
+
+# edit neovim config file
+ednvi() {
+	cd $NVIMDOTDIR
+	vim ./init.vim && vim -c "source ./init.vim" -c "q" || echo "⚠️  Error editing file"
+	echo -e "\t\e[32m✔\e[0m NeoVim Configuration updated"
+}
+#	}
 
 
-## ---------------------- NANO  -------------------------
+# ---------------------- NANO  ------------------------- {
 
 ednano() {
 	cd ~/.config/nano/
-	vi ~/.config/nano/nanorc &&
+	vim ~/.config/nano/nanorc &&
 		source ~/.config/nano/nanorc
 			echo -e "\t\e[32m✔\e[0m Nano Configuration updated and sourced"
 		}
-##
+#	}
 
-## ---------------------- ADBLOCK  -------------------------
+# ---------------------- ADBLOCK  ------------------------- {
 #AdBlock Functions (hBlock)
 edadb() {
-	sudo -E vi /etc/hblock/sources.list &&
+	sudo -E vim /etc/hblock/sources.list &&
 		hblock
 	}
-##
+#	}
 
 
-## ----------------------  GIT  -------------------------
+#  ----------------------  GIT  ------------------------- {
 # git add files in dir and commit /w msg
 gac() {
 	if [[ -z $@ ]]
@@ -121,7 +130,7 @@ gac() {
 	git commit -m $msg ||
 		echo "⚠️  Error "
 }
-##
+#	}
 
 
 ## Git add current dir changes, commit and push
@@ -149,9 +158,9 @@ gacap(){
 	echo -e "\e[32mGit Status\e[0m"
 	git status
 }
-##
+#	}
 
-## ---------------------- PROGRESS BAR -------------------------
+# ---------------------- PROGRESS BAR ------------------------- {
 progress-bar() {
 	local duration=${1}
 
@@ -167,5 +176,5 @@ progress-bar() {
 	done
 	clean_line
 }
-##
+#	}
 
