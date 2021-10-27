@@ -2,7 +2,7 @@
 #-----------------------  ZSHENV  --------------------------#
 #############################################################
 
-## Version 27.10.21 - 11:30
+## Version 27.10.21 - 12:20
 
 # SHELL
 export SHELL=/bin/zsh
@@ -23,12 +23,12 @@ export ZDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/.zsh"
 export XDG_CONFIG_HOME="/Users/Kevin/.config"
 
 # NVIM
-export NVIMDOTDIR="$HOME/.config/nvim"
-export VIMINIT="source $NVIMDOTDIR/init.vim"
+export NVIMDOTDIR="$XDG_CONFIG_HOME/nvim"
 
 # VIM
-export VIMDOTDIR="$HOME/.config/vim"
+export VIMDOTDIR="$XDG_CONFIG_HOME/vim"
 export MYVIMRC="$VIMDOTDIR/vimrc"
+export VIMINIT="source $MYVIMRC"
 
 # NANO
 export NANOINIT="source $HOME/.config/nano/nanorc"
