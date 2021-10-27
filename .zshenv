@@ -2,10 +2,11 @@
 #-----------------------  ZSHENV  --------------------------#
 #############################################################
 
-## Version 27.10.21 - 10:00
+## Version 27.10.21 - 11:30
 
-# Exports
+# SHELL
 export SHELL=/bin/zsh
+export TERM=xterm-256color
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=$PATH:/Library/Apple/usr/bin:/Users/Kevin/.local/bin/
 
