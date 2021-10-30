@@ -30,6 +30,9 @@ export VIMDOTDIR="$XDG_CONFIG_HOME/vim"
 export MYVIMRC="$VIMDOTDIR/vimrc"
 export VIMINIT="source $MYVIMRC"
 
+# VIMR
+export MYGVIMRC="$NVIMDOTDIR/ginit.vim"
+
 # NANO
 export NANOINIT="source $HOME/.config/nano/nanorc"
 
