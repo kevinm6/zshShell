@@ -2,7 +2,7 @@
 #------------------------  ALIAS  --------------------------#
 #############################################################
 
-# Version 27.10.21 - 10:00
+# Version 31.10.2021 - 18:20
 
 # ------------------------- SUFFIX ALIASES -------------------------
 alias -s json=$VISUAL
@@ -23,7 +23,7 @@ alias oa="open -a"
 alias o="open"
 alias oe="open -e"
 alias ka="killall"
-alias vi="nvim"
+alias nv="nvim"
 alias rmh="rm $ZDOTDIR/.zsh_history"
 alias zpath="$ZDOTDIR"
 alias vipath="$VIMDOTDIR"
