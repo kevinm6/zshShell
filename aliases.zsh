@@ -2,7 +2,7 @@
 #------------------------  ALIAS  --------------------------#
 #############################################################
 
-# Version 31.10.2021 - 18:20
+# Version 04.11.21 19:06
 
 # ------------------------- SUFFIX ALIASES -------------------------
 alias -s json=$VISUAL
@@ -47,15 +47,10 @@ alias gor="go run"
 
 # ------------------------- HOMEBREW -------------------------
 alias br="brew"
-alias bru="brew update"                                                  
-alias bri="brew install"                                                      
-alias brri="brew reinstall"                                                   
-alias "br??"="brew info"                                                       
-alias bruu="brew update && brew upgrade"                                    
-alias brupg="brew upgrade"                                                    
-alias brc="brew cleanup"
+alias bri="brew install"
+alias bruu="brew update && brew upgrade" 
+alias brupg="brew upgrade"
 alias brrm="brew remove"
-alias brrmz="brew remove --zap"                                               
 alias brs="brew search"
 alias brcu="brew cu -ay"
 
