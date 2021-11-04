@@ -3,9 +3,7 @@
 ###########################################################################
 
 # ZSH Shell with iTerm2
-# Version 26.10.21 - 15:00
-
-#set rtp+="$NVIMDOTDIR/init.vim"
+# Version 04.11.21 20:40
 
 # Vim mode
 bindkey -v # enable vi mode and set it to main
