@@ -2,7 +2,7 @@
 #-----------------------  ZSHENV  --------------------------#
 #############################################################
 
-## Version 27.10.21 - 12:20
+## Version 06.11.21 12:30
 
 # SHELL
 export SHELL=/bin/zsh
@@ -21,6 +21,9 @@ export BROWSER="/Applications/Safari.app"
 # ZSH 
 export ZDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/.zsh"
 export XDG_CONFIG_HOME="/Users/Kevin/.config"
+
+# Bin Backup path
+export BINBACKPATH="$HOME/Documents/Devices/Backup_Files/Shell/bin/"
 
 # NVIM
 export NVIMDOTDIR="$XDG_CONFIG_HOME/nvim"
@@ -60,7 +63,7 @@ export PROG2HOME="/Users/Kevin/Informatica/2°Anno/1°Semestre/Programmazione II
 # export PATH="$PROG2HOME/.bin:$PATH"
 
 # POSTGRES
-# export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
 # export LDFLAGS="-L/usr/local/opt/postgresql@13/lib"
 # export CPPFLAGS="-I/usr/local/opt/postgresql@13/include"
 
