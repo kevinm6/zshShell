@@ -40,7 +40,8 @@ export MYGVIMRC="$NVIMDOTDIR/ginit.vim"
 export NANOINIT="source $HOME/.config/nano/nanorc"
 
 # PYTHON
-export PYTHON="/usr/local/opt/python/libexec/bin/python"
+export PYTHON="/usr/local/opt/python@3.10/bin"
+export PATH="/usr/local/opt/python@3.10/bin:$PATH"
 
 # appending to path
 # java -> setting java11 as default
