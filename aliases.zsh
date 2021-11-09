@@ -2,7 +2,7 @@
 #------------------------  ALIAS  --------------------------#
 #############################################################
 
-# Version 06.11.21 12:30
+# Version 09.11.21 20:36
 
 # ------------------------- SUFFIX ALIASES ------------------------- {
 	alias -s json=$VISUAL
@@ -50,7 +50,6 @@
 	alias br="brew"
 	alias bri="brew install"
 	alias bruu="brew update && brew upgrade" 
-	alias brupg="brew upgrade"
 	alias brrm="brew remove"
 	alias brs="brew search"
 	alias brcu="brew cu -ay"
