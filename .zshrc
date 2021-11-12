@@ -3,7 +3,7 @@
 ###########################################################################
 
 # ZSH Shell with iTerm2
-# Version 04.11.21 20:40
+# Version 12.11.21 10:00
 
 # Vim mode
 bindkey -v # enable vi mode and set it to main
@@ -27,6 +27,22 @@ sources=(
 	[ALIASES]="$ZDOTDIR/aliases.zsh"
 	[FUNCTIONS]="$ZDOTDIR/functions.zsh"
 )
+
+if [ "$TERM_PROGRAM" = "vscode" ]
+then
+	typeset -A scs # declare sources as array
+	scs=(
+		[OPTIONS]="$ZDOTDIR/options.zsh"
+		[PROMPT]="$ZDOTDIR/prompt.zsh"
+		[BINDKEYS]="$ZDOTDIR/binds.zsh"
+		[ALIASES]="$ZDOTDIR/aliases.zsh"
+	)	
+	for key value in ${(kv)scs}; do
+		[[ -a $value ]] && 
+			source $value || echo "\t ⚠️  $key File not found!"
+	done
+  exit
+fi
 
 for key value in ${(kv)sources}; do
 	[[ -a $value ]] && 
