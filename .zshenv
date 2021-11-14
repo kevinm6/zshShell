@@ -1,8 +1,11 @@
-#############################################################
-#-----------------------  ZSHENV  --------------------------#
-#############################################################
+############################################
+# File: .zshenv
+# Description: Zsh Enviroment configuration file
+# Author: Kevin
+# Source: https://github.com/kevinm6/zsh/
+# Last Modified: 06.11.21 12:30
+############################################
 
-## Version 06.11.21 12:30
 
 # SHELL
 export SHELL=/bin/zsh
@@ -30,11 +33,12 @@ export NVIMDOTDIR="$XDG_CONFIG_HOME/nvim"
 
 # VIM
 export VIMDOTDIR="$XDG_CONFIG_HOME/vim"
-export MYVIMRC="$VIMDOTDIR/vimrc"
-export VIMINIT="source $MYVIMRC"
 
 # VIMR
 export MYGVIMRC="$NVIMDOTDIR/ginit.vim"
+
+export MYVIMRC="$NVIMDOTDIR/init.vim"
+export VIMINIT="source $MYVIMRC"
 
 # NANO
 export NANOINIT="source $HOME/.config/nano/nanorc"

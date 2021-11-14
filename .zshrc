@@ -1,9 +1,11 @@
-###########################################################################
-#-------------------------  K ZSH Configuration --------------------------#
-###########################################################################
+############################################
+# File: .zshrc
+# Description:  ZSH Shell with iTerm2
+# Author: Kevin
+# Source: https://github.com/kevinm6/zsh/
+# Last Modified: 14.11.21 13:00
+############################################
 
-# ZSH Shell with iTerm2
-# Version 12.11.21 10:00
 
 # Vim mode
 bindkey -v # enable vi mode and set it to main
