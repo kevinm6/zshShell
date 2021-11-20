@@ -3,7 +3,7 @@
 # Description: Zsh Enviroment configuration file
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 06.11.21 12:30
+# Last Modified: 20.11.21 - 14:00
 ############################################
 
 
@@ -37,6 +37,8 @@ export VIMDOTDIR="$XDG_CONFIG_HOME/vim"
 # VIMR
 export MYGVIMRC="$NVIMDOTDIR/ginit.vim"
 
+export PATH="/Applications/VimR.app/Contents/MacOS/VimR:$PATH"
+
 export MYVIMRC="$NVIMDOTDIR/init.vim"
 export VIMINIT="source $MYVIMRC"
 
@@ -48,8 +50,10 @@ export PYTHON="/usr/local/opt/python@3.10/bin"
 export PATH="/usr/local/opt/python@3.10/bin:$PATH"
 
 # appending to path
-# java -> setting java11 as default
+# java -> setting java17 as default
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk"
+export JAVA_11_HOME="/Library/Java/JavaVirtualMachines/openjdk-11.jdk"
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 
 # curl
