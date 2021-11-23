@@ -10,7 +10,7 @@
 # SHELL {
 	export SHELL=/bin/zsh
 	export TERM=xterm-256color
-	export LANG="en_IT.UTF-8"
+	export LANG="en_US.UTF-8"
 	export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
 	export PATH=$PATH:/Library/Apple/usr/bin:/Users/Kevin/.local/bin/
 # }
