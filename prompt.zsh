@@ -1,17 +1,17 @@
-############################################
+#-------------------------------------------
 # File: prompt.zsh
-# Description: K prompt for zsh shell
+# Description: K ZSH Shell prompt
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 14.11.21 13:00
-############################################
+# Last Modified: 23.11.21 12:49
+#-------------------------------------------
 
 
 precmd() {
 	vcs_info
 } 
 
-# Options
+# Vim Modes
 vi_mode_ins=${vi_mode_ins:-'%F{blue}[ ins ]%f'}
 vi_mode_cmd=${vi_mode_cmd:-'%F{yellow}[ cmd ]%f'}
 vi_mode_symbol="${vi_mode_ins}" #initialize mode
