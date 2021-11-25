@@ -3,7 +3,7 @@
 # Description: K ZSH Shell prompt
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 23.11.21 12:49
+# Last Modified: 25.11.21 11:46 
 #-------------------------------------------
 
 
@@ -45,5 +45,5 @@ parse_git_branch() {
 setopt PROMPT_SUBST
 
 RPROMPT=$'$vi_mode_symbol  ⌚️ %F{white}%*%f'
-PROMPT=$'\n  %# %F{blue}%4~%f\t%B%F{red}⅄$(parse_git_branch)%f%b\n '
+PROMPT=$'\n  %# %F{blue}%3~%f\t%B%F{red}⅄$(parse_git_branch)%f%b\n '
 
