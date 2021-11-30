@@ -3,7 +3,7 @@
 # Description: K ZSH Shell options
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 30.11.21 18:10
+# Last Modified: 30.11.21 19:32
 #-------------------------------------------
 
 
@@ -24,6 +24,4 @@ setopt no_list_beep
 	setopt append_history # add to main history instead of overwrite it
 	setopt hist_save_no_dups # do not save duplicates
 # }
-
-autoload colors
 
