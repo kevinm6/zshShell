@@ -3,12 +3,11 @@
 # Description: K ZSH Shell options
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 23.11.21 12:47
+# Last Modified: 30.11.21 18:10
 #-------------------------------------------
 
 
 # Various Options {
-setopt PROMPT_SUBST
 setopt auto_cd
 setopt auto_menu
 setopt auto_list
@@ -27,6 +26,4 @@ setopt no_list_beep
 # }
 
 autoload colors
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git svn
 
