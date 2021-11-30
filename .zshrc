@@ -3,7 +3,7 @@
 # Description:  ZSH Shell with iTerm2
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 23.11.21 12:33
+# Last Modified: 30.11.21 19:34
 #-------------------------------------------
 
 
@@ -15,6 +15,9 @@
 
 # loading zsh mv command
 autoload zmv
+autoload -U colors && colors
+autoload -Uz vcs_info
+
 
 # Edit line in vim w/ ctrl-e {
 	autoload edit-command-line; zle -N edit-command-line
@@ -25,10 +28,10 @@ autoload zmv
 	typeset -A sources # declare sources as array
 	sources=(
 		[OPTIONS]="$ZDOTDIR/options.zsh"
-		[PROMPT]="$ZDOTDIR/prompt.zsh"
 		[BINDKEYS]="$ZDOTDIR/binds.zsh"
 		[ALIASES]="$ZDOTDIR/aliases.zsh"
 		[FUNCTIONS]="$ZDOTDIR/functions.zsh"
+		[PROMPT]="$ZDOTDIR/prompt.zsh"
 	)
 # }
 
