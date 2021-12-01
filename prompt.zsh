@@ -27,7 +27,7 @@ precmd() {
 }
 
 # PROMPT=$'\n  %# %F{blue}%$pathlen~%f\t%B%F{red} ${vcs_info_msg_0_}%f%b\n'
-PROMPT=$'\n %# %F{blue}%$pathlen~%f\t${vcs_info_msg_0_}\n '
+PROMPT=$'\n %# %F{blue}%$pathlen~%f   ${vcs_info_msg_0_}\n '
 
 function zle-line-init zle-keymap-select {
 		case ${KEYMAP} in
