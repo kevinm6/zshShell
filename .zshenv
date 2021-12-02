@@ -3,7 +3,7 @@
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 23.11.21 12:50
+# Last Modified: 02/12/21 - 10:55
 #-------------------------------------------
 
 
@@ -79,6 +79,7 @@
 	# export CPPFLAGS="-I/usr/local/opt/postgresql@13/include"
 # }
 
+	export PATH="$PATH:/Library/Frameworks/Mono.framework/Versions/Current/Commands"
 
 # Source zsh highlight {
 	export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/local/share/zsh-syntax-highlighting/highlighters/"
