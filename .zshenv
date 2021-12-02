@@ -29,6 +29,7 @@
 
 	# Bin Backup path
 	export BINBACKPATH="$HOME/Documents/Devices/Backup_Files/Shell/bin/"
+	export BACKSH="$HOME/Documents/Devices/Backup_Files/Shell/"
 
 	# NVIM
 	export NVIMDOTDIR="$XDG_CONFIG_HOME/nvim"
