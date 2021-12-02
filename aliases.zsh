@@ -21,7 +21,7 @@
 	alias cdc="cd && clear"
 	alias ".."="cd .."
 	alias "..,.."="cd ../.."
-	alias :x="exit"
+	alias ZQ="exit"
 	alias hh="history"
 	alias oa="open -a"
 	alias o="open"
