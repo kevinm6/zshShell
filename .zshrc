@@ -41,9 +41,9 @@ autoload -Uz vcs_info
 		typeset -A scs # declare sources as array
 		scs=(
 			[OPTIONS]="$ZDOTDIR/options.zsh"
-			[PROMPT]="$ZDOTDIR/prompt.zsh"
 			[BINDKEYS]="$ZDOTDIR/binds.zsh"
 			[ALIASES]="$ZDOTDIR/aliases.zsh"
+			[PROMPT]="$ZDOTDIR/prompt.zsh"
 		)	
 		for key value in ${(kv)scs}; do
 			[[ -a $value ]] && 
