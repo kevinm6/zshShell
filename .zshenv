@@ -39,7 +39,7 @@
 	# VIMR
 	export MYGVIMRC="$NVIMDOTDIR/ginit.vim"
 
-	export PATH="/Applications/VimR.app/Contents/MacOS/VimR:$PATH"
+	export PATH="/Applications/VimR.app/Contents/Resources/vimr:$PATH"
 
 	export MYVIMRC="$NVIMDOTDIR/init.vim"
 	export VIMINIT="source $MYVIMRC"
