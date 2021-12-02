@@ -3,7 +3,7 @@
 # Description:  ZSH Shell with iTerm2
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 30.11.21 19:34
+# Last Modified: 02/12/21 - 10:37
 #-------------------------------------------
 
 
@@ -66,7 +66,10 @@ done
 # }
 
 # Basic auto/tab complete {
-	autoload -Uz compinit && compinit
+	autoload -Uz compinit
+	[ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump) ] &&
+		compinit || compinit -C
+
 	zstyle ':completion:*' menu select # select completions with arrow keys
 
 	if type brew &>/dev/null; then
