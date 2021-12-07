@@ -3,7 +3,7 @@
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 02/12/21 - 10:55
+# Last Modified: 07.12.21 15:58
 #-------------------------------------------
 
 
@@ -20,6 +20,7 @@
 	export EDITOR=nvim
 	export VISUAL=vimr
 	export BROWSER="/Applications/Safari.app"
+	export CS="$HOME/Documents/Informatica/"
 # }
 
 # Set default directories {
@@ -42,7 +43,7 @@
 
 	export PATH="/Applications/VimR.app/Contents/Resources/vimr:$PATH"
 
-	export MYVIMRC="$NVIMDOTDIR/init.vim"
+	export MYVIMRC="$NVIMDOTDIR/init.lua"
 	export VIMINIT="source $MYVIMRC"
 
 	# NANO
@@ -55,6 +56,7 @@
 	# appending to path
 	# java -> setting java17 as default
 	export PATH="/usr/local/opt/openjdk/bin:$PATH"
+	export JTDLS_HOME="$HOME/.local/share/nvim/lsp_servers/jdtls"
 	export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk"
 	export JAVA_11_HOME="/Library/Java/JavaVirtualMachines/openjdk-11.jdk"
 	export CPPFLAGS="-I/usr/local/opt/openjdk/include"
