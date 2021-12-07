@@ -16,7 +16,8 @@
 # }
 
 # VARIOUS TERMINAL {
-	alias l="ls -al"
+	alias l="ls -G"
+	alias ll="ls -al"
 	alias c="clear"
 	alias cdc="cd && clear"
 	alias ".."="cd .."
