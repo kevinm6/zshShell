@@ -3,7 +3,7 @@
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 07.12.21 15:58
+# Last Modified: 14/12/21 - 18:47
 #-------------------------------------------
 
 
@@ -12,7 +12,7 @@
 	export TERM=xterm-256color
 	export LANG="en_US.UTF-8"
 	export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
-	export PATH=$PATH:/Library/Apple/usr/bin:/Users/Kevin/.local/bin/
+	export PATH=$PATH:/Library/Apple/usr/bin:/Users/Kevin/.local
 # }
 #export DISPLAY="DISPLAY 0.0"
 
@@ -57,8 +57,8 @@
 	# java -> setting java17 as default
 	export PATH="/usr/local/opt/openjdk/bin:$PATH"
 	export JTDLS_HOME="$HOME/.local/share/nvim/lsp_servers/jdtls"
-	export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk"
-	export JAVA_11_HOME="/Library/Java/JavaVirtualMachines/openjdk-11.jdk"
+	# export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk"
+	# export JAVA_11_HOME="/Library/Java/JavaVirtualMachines/openjdk-11.jdk"
 	export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 
 	# curl
@@ -66,6 +66,7 @@
 
 	# python
 	export PATH=/usr/local/opt/python/libexec/bin:$PATH
+	export PATH="$HOME/.local/share/nvim/lsp_servers/python/node_modules/pyright/dist/:$PATH"
 
 	# go
 	export GOPATH="$HOME/.config/go"
@@ -80,7 +81,18 @@
 	export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
 	# export LDFLAGS="-L/usr/local/opt/postgresql@13/lib"
 	# export CPPFLAGS="-I/usr/local/opt/postgresql@13/include"
+	
+	# LSP-SERVERS
+	# export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin/macOS"
+	# export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/vim/node_modules"
+	# export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/ltex"
+	# export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/jsonls/node_modules/vscode-langservers-extracted/bin"
+	# export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/bash/node_modules/bash-language-server/bin "
+	# export PATH="$PATH:$HOME/"
+
+	
 # }
+
 
 	export PATH="$PATH:/Library/Frameworks/Mono.framework/Versions/Current/Commands"
 

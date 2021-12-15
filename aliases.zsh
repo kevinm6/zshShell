@@ -3,7 +3,7 @@
 # Description: K ZSH shell aliases
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/blob/zsh/aliases.zsh
-# Last Modified: 23.11.21 12:35
+# Last Modified: 15/12/21 - 17:43
 #-------------------------------------------
 
 
@@ -29,6 +29,7 @@
 	alias oe="open -e"
 	alias ka="killall"
 	alias nv="nvim"
+	alias vi="nvim"
 	alias vr="vimr"
 	alias rmh="rm $ZDOTDIR/.zsh_history"
 	alias cpwd="echo $PWD | pbcopy"

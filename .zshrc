@@ -24,20 +24,10 @@ autoload -Uz vcs_info
 	bindkey '^e' edit-command-line 
 # }
 
-# Source ZDOTDIR on iCloud Drive {
-	typeset -A sources # declare sources as array
-	sources=(
-		[OPTIONS]="$ZDOTDIR/options.zsh"
-		[BINDKEYS]="$ZDOTDIR/binds.zsh"
-		[ALIASES]="$ZDOTDIR/aliases.zsh"
-		[FUNCTIONS]="$ZDOTDIR/functions.zsh"
-		[PROMPT]="$ZDOTDIR/prompt.zsh"
-	)
-# }
 
 # VScode? {
 	if [ "$TERM_PROGRAM" = "vscode" ]
-	then
+then
 		typeset -A scs # declare sources as array
 		scs=(
 			[OPTIONS]="$ZDOTDIR/options.zsh"
@@ -51,6 +41,18 @@ autoload -Uz vcs_info
 		done
 		exit
 	fi
+# }
+
+
+# Source ZDOTDIR on iCloud Drive {
+	typeset -A sources # declare sources as array
+	sources=(
+		[OPTIONS]="$ZDOTDIR/options.zsh"
+		[BINDKEYS]="$ZDOTDIR/binds.zsh"
+		[ALIASES]="$ZDOTDIR/aliases.zsh"
+		[FUNCTIONS]="$ZDOTDIR/functions.zsh"
+		[PROMPT]="$ZDOTDIR/prompt.zsh"
+	)
 # }
 
 for key value in ${(kv)sources}; do
