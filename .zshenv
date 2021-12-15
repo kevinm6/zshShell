@@ -3,7 +3,7 @@
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 14/12/21 - 18:47
+# Last Modified: 15/12/21 - 21:05
 #-------------------------------------------
 
 
@@ -34,17 +34,14 @@
 
 	# NVIM
 	export NVIMDOTDIR="$XDG_CONFIG_HOME/nvim"
+	export MYVIMRC="$NVIMDOTDIR/init.lua"
+	export VIMINIT="source $MYVIMRC"
 
 	# VIM
 	export VIMDOTDIR="$XDG_CONFIG_HOME/vim"
 
 	# VIMR
-	export MYGVIMRC="$NVIMDOTDIR/ginit.vim"
-
 	export PATH="/Applications/VimR.app/Contents/Resources/vimr:$PATH"
-
-	export MYVIMRC="$NVIMDOTDIR/init.lua"
-	export VIMINIT="source $MYVIMRC"
 
 	# NANO
 	export NANOINIT="source $HOME/.config/nano/nanorc"
@@ -53,7 +50,7 @@
 	export PYTHON="/usr/local/opt/python@3.10/bin"
 	export PATH="/usr/local/opt/python@3.10/bin:$PATH"
 
-	# appending to path
+	# JAVA
 	# java -> setting java17 as default
 	export PATH="/usr/local/opt/openjdk/bin:$PATH"
 	export JTDLS_HOME="$HOME/.local/share/nvim/lsp_servers/jdtls"
@@ -81,16 +78,6 @@
 	export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
 	# export LDFLAGS="-L/usr/local/opt/postgresql@13/lib"
 	# export CPPFLAGS="-I/usr/local/opt/postgresql@13/include"
-	
-	# LSP-SERVERS
-	# export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin/macOS"
-	# export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/vim/node_modules"
-	# export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/ltex"
-	# export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/jsonls/node_modules/vscode-langservers-extracted/bin"
-	# export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/bash/node_modules/bash-language-server/bin "
-	# export PATH="$PATH:$HOME/"
-
-	
 # }
 
 
