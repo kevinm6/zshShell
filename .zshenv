@@ -3,7 +3,7 @@
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 15/12/21 - 21:05
+# Last Modified: 17/12/21 - 11:21
 #-------------------------------------------
 
 
@@ -72,7 +72,7 @@
 
 	# PROGRAMMAZIONE II
 	export PROG2HOME="/Users/Kevin/Informatica/2°Anno/1°Semestre/Programmazione II/RepoEsercitazioni/esercitazioni"
-	# export PATH="$PROG2HOME/.bin:$PATH"
+	export PATH="$PROG2HOME/.bin:$PATH"
 
 	# POSTGRES
 	export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
