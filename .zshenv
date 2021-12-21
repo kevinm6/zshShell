@@ -3,7 +3,7 @@
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 17/12/21 - 11:21
+# Last Modified: 21/12/21 - 16:09
 #-------------------------------------------
 
 
@@ -15,6 +15,10 @@
 	export PATH=$PATH:/Library/Apple/usr/bin:/Users/Kevin/.local
 # }
 #export DISPLAY="DISPLAY 0.0"
+
+# Homebrew {
+	export HOMEBREW_NO_ENV_HINTS=false
+# }
 
 # Set default apps {
 	export EDITOR=nvim
