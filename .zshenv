@@ -74,6 +74,9 @@
 	export GOROOT="$(brew --prefix golang)/libexec"
 	export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
+	# Lua
+	export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin"
+
 	# PROGRAMMAZIONE II
 	export PROG2HOME="/Users/Kevin/Informatica/2°Anno/1°Semestre/Programmazione II/RepoEsercitazioni/esercitazioni"
 	export PATH="$PROG2HOME/.bin:$PATH"
