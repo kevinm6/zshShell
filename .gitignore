@@ -1,10 +1,6 @@
-
 .DS_Store
-.zcompcache/brew_all_commands
+.zcomp*
+.zcomp*/*
 .zsh_sessions/
-./.zcompcache/
-./.zcompcache/*
 .zcompdump*
 .zsh_history
-.zcompcache/brew_casks
-.zcompcache/brew_formulae

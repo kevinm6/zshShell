@@ -58,8 +58,6 @@
 	# java -> setting java17 as default
 	export PATH="/usr/local/opt/openjdk/bin:$PATH"
 	export JTDLS_HOME="$HOME/.local/share/nvim/lsp_servers/jdtls"
-	# export JAVA_HOME="/Library/Java/JavaVirtualMachines/openjdk.jdk"
-	# export JAVA_11_HOME="/Library/Java/JavaVirtualMachines/openjdk-11.jdk"
 	export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 
 	# curl
@@ -67,7 +65,7 @@
 
 	# python
 	export PATH=/usr/local/opt/python/libexec/bin:$PATH
-	export PATH="$HOME/.local/share/nvim/lsp_servers/python/node_modules/pyright/dist/:$PATH"
+	# export PATH="$HOME/.local/share/nvim/lsp_servers/python/node_modules/pyright/dist/:$PATH"
 
 	# go
 	export GOPATH="$HOME/.config/go"
@@ -75,7 +73,7 @@
 	export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
 	# Lua
-	export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin"
+	# export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin"
 
 	# PROGRAMMAZIONE II
 	export PROG2HOME="/Users/Kevin/Informatica/2°Anno/1°Semestre/Programmazione II/RepoEsercitazioni/esercitazioni"
@@ -83,8 +81,6 @@
 
 	# POSTGRES
 	export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
-	# export LDFLAGS="-L/usr/local/opt/postgresql@13/lib"
-	# export CPPFLAGS="-I/usr/local/opt/postgresql@13/include"
 # }
 
 
