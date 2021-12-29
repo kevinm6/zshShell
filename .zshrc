@@ -3,7 +3,7 @@
 # Description:  ZSH Shell with iTerm2
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 02/12/21 - 10:37
+# Last Modified: 29/12/21 - 19:39
 #-------------------------------------------
 
 
@@ -18,6 +18,10 @@ autoload zmv
 autoload -U colors && colors
 autoload -Uz vcs_info
 
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+_comp_options+=(globdots)		# Include hidden files.
 
 # Edit line in vim w/ ctrl-e {
 	autoload edit-command-line; zle -N edit-command-line
@@ -52,6 +56,7 @@ then
 		[ALIASES]="$ZDOTDIR/aliases.zsh"
 		[FUNCTIONS]="$ZDOTDIR/functions.zsh"
 		[PROMPT]="$ZDOTDIR/prompt.zsh"
+		[AUTOSUGGESTION]="/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 	)
 # }
 
