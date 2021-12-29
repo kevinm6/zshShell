@@ -2,16 +2,18 @@
 # File: options.zsh
 # Description: K ZSH Shell options
 # Author: Kevin
-# Source: https://github.com/kevinm6/zsh/
-# Last Modified: 30.11.21 19:32
+# Source: https://github.com/kevinm6/zsh/blob/zsh/options.zsh
+# Last Modified: 29/12/21 - 19:09
 #-------------------------------------------
 
 
 # Various Options {
 setopt auto_cd
-setopt auto_menu
+setopt menucomplete
 setopt auto_list
 setopt correct
+setopt interactive_comments
+setopt extendedglob
 setopt vi
 setopt no_list_beep
 # }
