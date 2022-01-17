@@ -3,7 +3,7 @@
 # Description:  ZSH Shell with iTerm2
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 29/12/21 - 19:39
+# Last Modified: 17/01/2022 - 10:32
 #-------------------------------------------
 
 
@@ -27,25 +27,6 @@ _comp_options+=(globdots)		# Include hidden files.
 	autoload edit-command-line; zle -N edit-command-line
 	bindkey '^e' edit-command-line 
 # }
-
-
-# VScode? {
-	if [ "$TERM_PROGRAM" = "vscode" ]
-then
-		typeset -A scs # declare sources as array
-		scs=(
-			[OPTIONS]="$ZDOTDIR/options.zsh"
-			[BINDKEYS]="$ZDOTDIR/binds.zsh"
-			[ALIASES]="$ZDOTDIR/aliases.zsh"
-			[PROMPT]="$ZDOTDIR/prompt.zsh"
-		)	
-		for key value in ${(kv)scs}; do
-			[[ -a $value ]] && 
-				source $value || echo "\t ⚠️  $key File not found!"
-		done
-		exit
-	fi
-# }
 
 
 # Source ZDOTDIR on iCloud Drive {

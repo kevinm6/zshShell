@@ -3,7 +3,7 @@
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 21/12/21 - 16:09
+# Last Modified: 17/01/2022 - 10:33
 #-------------------------------------------
 
 
@@ -75,14 +75,9 @@
 	# Lua
 	# export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin"
 
-	# PROGRAMMAZIONE II
-	export PROG2HOME="/Users/Kevin/Informatica/2°Anno/1°Semestre/Programmazione II/RepoEsercitazioni/esercitazioni"
-	export PATH="$PROG2HOME/.bin:$PATH"
-
 	# POSTGRES
 	export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
 # }
-
 
 	export PATH="$PATH:/Library/Frameworks/Mono.framework/Versions/Current/Commands"
 
