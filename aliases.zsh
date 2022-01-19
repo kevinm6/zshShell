@@ -3,7 +3,7 @@
 # Description: K ZSH shell aliases
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/blob/zsh/aliases.zsh
-# Last Modified: 16/01/2022 - 19:26
+# Last Modified: 19/01/2022 - 19:59
 #-------------------------------------------
 
 
@@ -18,7 +18,7 @@
 # VARIOUS TERMINAL {
 	alias l="ls -G"
 	alias lol="ls -1G"
-	alias ll="ls -al"
+	alias ll="ls -alh"
 	alias c="clear"
 	alias cdc="cd && clear"
 	alias ".."="cd .."
