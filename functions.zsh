@@ -3,7 +3,7 @@
 # Description: K ZSH Shell Functions
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 23.11.21 12:46
+# Last Modified: 19/01/2022 - 10:48
 #-------------------------------------------
 
 
@@ -88,7 +88,7 @@
 	
 	ednvi() { # edit neovim config file
 		cd $NVIMDOTDIR
-		nvim ./init.vim && nvim -c "source ./init.vim" -c "q" || echo "⚠️  Error editing file"
+		nvim ./init.lua && nvim -c "source ./init.lua" -c "q" || echo "⚠️  Error editing file"
 		echo -e "\t\e[32m✔\e[0m NeoVim Configuration updated"
 	}
 # }
