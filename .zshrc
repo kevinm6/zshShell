@@ -3,7 +3,7 @@
 # Description:  ZSH Shell with iTerm2
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 17/01/2022 - 10:32
+# Last Modified: 24/01/2022 - 19:13
 #-------------------------------------------
 
 
@@ -50,7 +50,7 @@ done
 # HISTORY CONFIGURATION {
 	HISTSIZE=6000
 	SAVEHIST=6000
-	HISTFILE="$ZDOTDIR/.zsh_history"
+	HISTFILE="$HOME/.cache/.zsh_history"
 # }
 
 # Basic auto/tab complete {
