@@ -131,8 +131,8 @@
 	gacap(){
 		echo -e "\e[32m\nGit Status\e[0m"
 		git status
-		git add .
-		echo "— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
+		git add . &&
+			echo "— — — — — — — — — — — — — — — — — — — — — — — — — —\n"
 		msg=""
 		if [ -z $@ ]
 		then
