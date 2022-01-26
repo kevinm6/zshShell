@@ -83,6 +83,7 @@
 
 	# NPM
 	export PATH="$PATH:$XDG_CONFIG_HOME/.npm/.global-modules/bin"
+	export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/.npm/.npmrc"
 
 # Source zsh highlight {
 	export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/local/share/zsh-syntax-highlighting/highlighters/"
