@@ -2,8 +2,8 @@
 # File: .zshenv
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
-# Source: https://github.com/kevinm6/zsh/
-# Last Modified: 17/01/2022 - 10:33
+# Source: https://github.com/kevinm6/zsh/blob/zsh/.zshenv
+# Last Modified: 26/01/2022 - 09:02
 #-------------------------------------------
 
 
@@ -80,6 +80,9 @@
 # }
 
 	export PATH="$PATH:/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+
+	# NPM
+	export PATH="$PATH:$XDG_CONFIG_HOME/.npm/.global-modules/bin"
 
 # Source zsh highlight {
 	export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/local/share/zsh-syntax-highlighting/highlighters/"
