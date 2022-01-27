@@ -3,7 +3,7 @@
 # Description: K ZSH shell aliases
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/blob/zsh/aliases.zsh
-# Last Modified: 24/01/2022 - 13:08
+# Last Modified: 27/01/2022 - 09:55
 #-------------------------------------------
 
 
@@ -73,3 +73,7 @@
 	alias adb=hblock
 	alias adboff="hblock -S none -D none"
 # }
+
+# GIT {
+	alias config='/usr/local/bin/git --git-dir=/Users/Kevin/.dotfiles/ --work-tree=/Users/Kevin'
+# }
