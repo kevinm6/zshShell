@@ -34,7 +34,7 @@
 	alias nv="nvim"
 	alias vi="nvim"
 	alias vr="vimr"
-	alias rmh="rm $ZDOTDIR/.zsh_history"
+	alias rmh="rm $HOME/.cache/.zsh_history"
 	alias cpwd="echo $PWD | pbcopy"
 	alias python="/usr/local/opt/python/libexec/bin/python/"
 # }
