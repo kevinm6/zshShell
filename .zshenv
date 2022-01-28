@@ -3,7 +3,7 @@
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/blob/zsh/.zshenv
-# Last Modified: 26/01/2022 - 09:02
+# Last Modified: 28/01/2022 - 23:22
 #-------------------------------------------
 
 
@@ -12,7 +12,7 @@
 	export TERM=xterm-256color
 	export LANG="en_US.UTF-8"
 	export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin
-	export PATH=$PATH:/Library/Apple/usr/bin:/Users/Kevin/.local
+	export PATH=$PATH:/Library/Apple/usr/bin:/Users/Kevin/.local:/Users/Kevin/.local/bin
 # }
 #export DISPLAY="DISPLAY 0.0"
 
