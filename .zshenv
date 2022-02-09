@@ -3,7 +3,7 @@
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/blob/zsh/.zshenv
-# Last Modified: 28/01/2022 - 23:22
+# Last Modified: 07/02/2022 - 19:07
 #-------------------------------------------
 
 
@@ -29,12 +29,12 @@
 
 # Set default directories {
 	# ZSH 
-	export ZDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/.zsh"
+	export ZDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/.zsh"
 	export XDG_CONFIG_HOME="/Users/Kevin/.config"
 
 	# Bin Backup path
-	export BINBACKPATH="$HOME/Documents/Devices/Backup_Files/Shell/bin/"
-	export BACKSH="$HOME/Documents/Devices/Backup_Files/Shell/"
+	export BINBACKPATH="$HOME/Documents/Devices/Backup_Files/Shell/bin/"
+	export BACKSH="$HOME/Documents/Devices/Backup_Files/Shell/"
 
 	# NVIM
 	export NVIMDOTDIR="$XDG_CONFIG_HOME/nvim"

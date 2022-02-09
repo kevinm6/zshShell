@@ -3,7 +3,7 @@
 # Description:  ZSH Shell with iTerm2
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 24/01/2022 - 19:13
+# Last Modified: 07/02/22 - 19:16
 #-------------------------------------------
 
 
