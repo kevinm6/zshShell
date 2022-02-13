@@ -3,7 +3,7 @@
 # Description: K ZSH Shell Functions
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 19/01/2022 - 10:48
+# Last Modified: 13/02/2022 - 16:08
 #-------------------------------------------
 
 
@@ -75,6 +75,10 @@
 
 	zreload() {
 		source $ZDOTDIR/.zshrc
+	}
+
+	mkcd() {
+		mkdir -p "$@" && cd "$_"
 	}
 # } 
 
