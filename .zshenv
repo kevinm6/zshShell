@@ -3,7 +3,7 @@
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/blob/zsh/.zshenv
-# Last Modified: 07/02/2022 - 19:07
+# Last Modified: 15/02/2022 - 09:00
 #-------------------------------------------
 
 
@@ -17,6 +17,12 @@
 #export DISPLAY="DISPLAY 0.0"
 
 # Homebrew {
+	export HOMEBREW_BAT=true
+	export HOMEBREW_BAT_CONFIG_PATH="$XDG_CONFIG_HOME/bat/config"
+	export HOMEBREW_CASK_OPTS="--appdir=~/Applications --fontdir=/Library/Fonts"
+	export HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS=16
+	export HOMEBREW_CLEANUP_MAX_AGE_DAYS=90
+	export HOMEBREW_NO_ANALYTICS=true
 	export HOMEBREW_NO_ENV_HINTS=false
 # }
 
