@@ -19,7 +19,7 @@
 # Homebrew {
 	export HOMEBREW_BAT=true
 	export HOMEBREW_BAT_CONFIG_PATH="$XDG_CONFIG_HOME/bat/config"
-	export HOMEBREW_CASK_OPTS="--appdir=~/Applications --fontdir=/Library/Fonts"
+	export HOMEBREW_CASK_OPTS="--appdir=/Applications --fontdir=/Library/Fonts"
 	export HOMEBREW_CLEANUP_PERIODIC_FULL_DAYS=16
 	export HOMEBREW_CLEANUP_MAX_AGE_DAYS=90
 	export HOMEBREW_NO_ANALYTICS=true
