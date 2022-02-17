@@ -3,7 +3,7 @@
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/blob/zsh/.zshenv
-# Last Modified: 15/02/2022 - 09:00
+# Last Modified: 17/02/2022 - 18:47
 #-------------------------------------------
 
 
@@ -59,6 +59,8 @@
 	# PYTHON
 	export PYTHON="/usr/local/opt/python@3.10/bin"
 	export PATH="/usr/local/opt/python@3.10/bin:$PATH"
+	export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+	# export PATH="$HOME/.local/share/nvim/lsp_servers/python/node_modules/pyright/dist/:$PATH"
 
 	# JAVA
 	# java -> setting java17 as default
@@ -68,10 +70,6 @@
 
 	# curl
 	export PATH=/usr/local/opt/curl/bin:$PATH
-
-	# python
-	export PATH=/usr/local/opt/python/libexec/bin:$PATH
-	# export PATH="$HOME/.local/share/nvim/lsp_servers/python/node_modules/pyright/dist/:$PATH"
 
 	# go
 	export GOPATH="$HOME/.config/go"
@@ -83,13 +81,23 @@
 
 	# POSTGRES
 	export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
-# }
+
 
 	export PATH="$PATH:/Library/Frameworks/Mono.framework/Versions/Current/Commands"
 
 	# NPM
 	export PATH="$PATH:$XDG_CONFIG_HOME/.npm/.global-modules/bin"
 	export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/.npm/.npmrc"
+
+	# RUBY
+	export GEM_HOME="$HOME/.cache/.gem"
+
+	# RUST / CARGO
+	export CARGO_HOME="$HOME/.cache/.cargo"
+
+	# PERL
+	export PERL_HOME="$HOME/.cache/.cpan"
+
 
 # Source zsh highlight {
 	export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/local/share/zsh-syntax-highlighting/highlighters/"
