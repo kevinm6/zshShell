@@ -35,12 +35,12 @@
 
 # Set default directories {
 	# ZSH 
-	export ZDOTDIR="$HOME/Documents/Devices/Backup_Files/Shell/.zsh"
 	export XDG_CONFIG_HOME="/Users/Kevin/.config"
+	export ZDOTDIR="$XDG_CONFIG_HOME/.zsh"
+	export BINBACKPATH="$XDG_CONFIG_HOME/bin"
 
-	# Bin Backup path
-	export BINBACKPATH="$HOME/Documents/Devices/Backup_Files/Shell/bin/"
-	export BACKSH="$HOME/Documents/Devices/Backup_Files/Shell/"
+	# iCloud Backup path
+	export BACKSH="$HOME/Documents/Devices/Backup_Files/"
 
 	# NVIM
 	export NVIMDOTDIR="$XDG_CONFIG_HOME/nvim"
