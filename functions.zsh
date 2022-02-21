@@ -74,7 +74,7 @@
 	}
 
 	zreload() {
-		source $ZDOTDIR/.zshrc
+	 exec zsh
 	}
 
 	mkcd() {
