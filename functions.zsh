@@ -3,7 +3,7 @@
 # Description: K ZSH Shell Functions
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 13/02/2022 - 16:08
+# Last Modified: 22/02/2022 - 10:01
 #-------------------------------------------
 
 
@@ -62,14 +62,14 @@
 	edz() {
 		cd ~/.config/.zsh/
 		nvim ~/.config/.zsh/.zshrc &&
-			source ~/.config/.zsh/.zshrc
+			exec zsh
 				echo -e "\t\e[32m✔\e[0m  Zsh Configuration updated and sourced"
 	}
 
 	edzp() {
 			cd ~/.config/.zsh/
 			nvim ~/.config/.zsh/.zprofile &&
-				source ~/.config/.zsh/.zprofile
+				exec zsh
 						echo -e "\t\e[32m✔\e[0m  Zsh Profile updated and sourced"
 	}
 
