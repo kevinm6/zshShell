@@ -187,3 +187,16 @@ function _pip_completion {
 }
 compctl -K _pip_completion pip
 # pip zsh completion end
+
+init_python_pipenv () {
+   echo "Setting up pipenv environment"
+   pipenv install --three
+   echo "Installing ipython kernel"
+   pipenv install --dev ipykernel
+   # get name of environment and remove checksum for pretty name
+   venv_name=$(basename -- $(pipenv --venv))
+   venv_prettyname=$(echo $venv_name | cut -d '-' -f 1)
+   echo "Adding ipython kernel to list of jupyter kernels"
+   $(pipenv --py) -m ipykernel install --user --name $venv_name \
+   --display-name "Python ($venv_prettyname)"
+}
