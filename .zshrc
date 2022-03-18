@@ -1,16 +1,15 @@
-#-------------------------------------------
+############################################
 # File: .zshrc
 # Description:  ZSH Shell with iTerm2
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 07/02/22 - 19:16
-#-------------------------------------------
+# Last Modified: 18/03/2022 - 10:17
+############################################
 
 
-# Vim mode {
-	bindkey -v # enable vi mode and set it to main
-	export KEYTIMEOUT=1 # timeout for keybinds
-# }
+# Vim mode
+bindkey -v # enable vi mode and set it to main
+export KEYTIMEOUT=1 # timeout for keybinds
 # emulate -LR zsh   <-- RESET TO DEFAULT ZSH OPTIONS
 
 # loading zsh mv command
@@ -23,23 +22,21 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 _comp_options+=(globdots)		# Include hidden files.
 
-# Edit line in vim w/ ctrl-e {
-	autoload edit-command-line; zle -N edit-command-line
-	bindkey '^e' edit-command-line 
-# }
+# Edit line in vim w/ ctrl-e
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line 
 
 
-# Source ZDOTDIR on iCloud Drive {
-	typeset -A sources # declare sources as array
-	sources=(
-		[OPTIONS]="$ZDOTDIR/options.zsh"
-		[BINDKEYS]="$ZDOTDIR/binds.zsh"
-		[ALIASES]="$ZDOTDIR/aliases.zsh"
-		[FUNCTIONS]="$ZDOTDIR/functions.zsh"
-		[PROMPT]="$ZDOTDIR/prompt.zsh"
-		[AUTOSUGGESTION]="/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-	)
-# }
+# Source ZDOTDIR on iCloud Drive
+typeset -A sources # declare sources as array
+sources=(
+  [OPTIONS]="$ZDOTDIR/options.zsh"
+  [BINDKEYS]="$ZDOTDIR/binds.zsh"
+  [ALIASES]="$ZDOTDIR/aliases.zsh"
+  [FUNCTIONS]="$ZDOTDIR/functions.zsh"
+  [PROMPT]="$ZDOTDIR/prompt.zsh"
+  [AUTOSUGGESTION]="/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+)
 
 for key value in ${(kv)sources}; do
 	[[ -a $value ]] && 
@@ -47,37 +44,34 @@ for key value in ${(kv)sources}; do
 done
 
 
-# HISTORY CONFIGURATION {
-	HISTSIZE=6000
-	SAVEHIST=6000
-	HISTFILE="$HOME/.cache/.zsh_history"
-# }
+# HISTORY CONFIGURATION
+HISTSIZE=6000
+SAVEHIST=6000
+HISTFILE="$HOME/.cache/.zsh_history"
 
-# Basic auto/tab complete {
-	autoload -Uz compinit
-	[ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump) ] &&
-		compinit || compinit -C
+# Basic auto/tab complete
+autoload -Uz compinit
+[ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZDOTDIR:-$HOME}/.zcompdump) ] &&
+  compinit || compinit -C
 
-	zstyle ':completion:*' menu select # select completions with arrow keys
+zstyle ':completion:*' menu select # select completions with arrow keys
 
-	if type brew &>/dev/null; then
-		FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-		autoload -Uz compinit
-		compinit
-	fi
-# }
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+  autoload -Uz compinit
+  compinit
+fi
 
-# PLUGINS {
-	plugins=(
-		vim
-		brew
-		man
-		osx
-		python
-		zsh-syntax-highlighting
-		h-autosuggestions
-	)
-# }
+# PLUGINS
+plugins=(
+  vim
+  brew
+  man
+  osx
+  python
+  zsh-syntax-highlighting
+  h-autosuggestions
+)
 
 test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
 
