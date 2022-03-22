@@ -3,7 +3,7 @@
 # Description:  ZSH Shell with iTerm2
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 18/03/2022 - 10:17
+# Last Modified: 22/03/2022 - 09:45
 ############################################
 
 
@@ -20,6 +20,7 @@ autoload -Uz vcs_info
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
+zmodload zsh/zpty # useful for NeoVim cmp-zsh
 _comp_options+=(globdots)		# Include hidden files.
 
 # Edit line in vim w/ ctrl-e
