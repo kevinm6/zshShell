@@ -3,7 +3,7 @@
 # Description: K ZSH shell aliases
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/blob/zsh/aliases.zsh
-# Last Modified: 18/03/2022 - 10:12
+# Last Modified: 23/03/2022 - 16:31
 ############################################
 
 
@@ -54,13 +54,10 @@ alias bri="brew install"
 alias bruu="brew update && brew upgrade" 
 alias brrm="brew remove"
 alias brs="brew search"
-alias brcu="brew cu --yes --cleanup"
+alias brcu="brew cu -a --cleanup"
 
 # JAVA
 alias java11="export JAVA_HOME=$JAVA_11_HOME"
-
-# GO
-alias gor="go run"
 
 
 # HBLOCK
