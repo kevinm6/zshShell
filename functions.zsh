@@ -3,7 +3,7 @@
 # Description: K ZSH Shell Functions
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 18/03/2022 - 10:22
+# Last Modified: 06/04/2022 - 09:06
 ############################################
 
 
@@ -77,6 +77,46 @@ zreload() {
 mkcd() {
   mkdir -p "$@" && cd "$_"
 }
+
+
+## QEMU-VM ##
+ubuntuDriveFile=/Users/Kevin/Linux/Ubuntu/ubuntu.qcow2
+manjaroDriveFile=/Users/Kevin/Linux/Manjaro/manjaro.qcow2
+
+# Qemu-VM starting args
+startQemuVM() {
+  qemu-system-x86_64 \
+    -m 5G \
+    -vga virtio \
+    -display default,show-cursor=on \
+    -usb \
+    -device usb-tablet \
+    -machine type=q35,accel=hvf \
+    -smp 2 \
+    -drive file=$1,if=virtio \
+    -cpu host \
+    -full-screen \
+    $@
+}
+
+startQemu() {
+  echo " Qemu VirtualMachine"
+  case "$1" in
+    "-u")
+      echo "\t L starting Ubuntu..."
+      startQemuVM $ubuntuDriveFile
+    ;;
+    "-m")
+      echo "\t L starting Manjaro..."
+      startManjaro $manjaroDriveFile
+    ;;
+    *)
+      echo "\t-u    Ubuntu Qemu-VM\n
+      \t-m    Manjaro Qemu-VM"
+    ;;
+  esac
+ }
+
 
 
 # VIM
