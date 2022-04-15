@@ -108,7 +108,7 @@ startQemu() {
     ;;
     "-m")
       echo "\t L starting Manjaro..."
-      startManjaro $manjaroDriveFile
+      startQemuVM $manjaroDriveFile
     ;;
     *)
       echo "\t-u    Ubuntu Qemu-VM\n
