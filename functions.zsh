@@ -82,6 +82,7 @@ mkcd() {
 ## QEMU-VM ##
 ubuntuDriveFile=/Users/Kevin/Linux/Ubuntu/ubuntu.qcow2
 manjaroDriveFile=/Users/Kevin/Linux/Manjaro/manjaro.qcow2
+# manjaroIso=/Users/Kevin/Linux/Manjaro/manjaro.iso
 
 # Qemu-VM starting args
 startQemuVM() {
