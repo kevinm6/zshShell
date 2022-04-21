@@ -82,35 +82,41 @@ mkcd() {
 ## QEMU-VM ##
 ubuntuDriveFile=/Users/Kevin/Linux/Ubuntu/ubuntu.qcow2
 manjaroDriveFile=/Users/Kevin/Linux/Manjaro/manjaro.qcow2
-# ubuntuIso=/Users/Kevin/Linux/Ubuntu/ubuntu.iso
-# manjaroIso=/Users/Kevin/Linux/Manjaro/manjaro.iso
-
-# Qemu-VM starting args
-startQemuVM() {
-  qemu-system-x86_64 \
-    -m 5G \
-    -vga virtio \
-    -display default,show-cursor=on \
-    -usb \
-    -device usb-tablet \
-    -machine type=q35,accel=hvf \
-    -smp 2 \
-    -drive file=$1,if=virtio \
-    -cpu host \
-    -full-screen \
-    $@
-}
+# ubuntuIso=$HOME/Linux/Ubuntu/ubuntu.iso
+# manjaroIso=$HOME/Linux/Manjaro/manjaro.iso
 
 startQemu() {
   echo " Qemu VirtualMachine"
   case "$1" in
     "-u")
       echo "\t L starting Ubuntu..."
-      startQemuVM $ubuntuDriveFile $ubuntuIso
+      qemu-system-x86_64 \
+        -m 5G \
+        -vga virtio \
+        -display default,show-cursor=on \
+        -usb \
+        -device usb-tablet \
+        -machine type=q35,accel=hvf \
+        -smp 2 \
+        -drive file=$ubuntuDriveFile,if=virtio \
+        -cpu host \
+        -full-screen \
+        $2
     ;;
     "-m")
-      echo "\t L starting Manjaro..."
-      startQemuVM $manjaroDriveFile
+      echo "\t L starting Manjaro...\n"
+      qemu-system-x86_64 \
+        -m 5G \
+        -vga virtio \
+        -display default,show-cursor=on \
+        -usb \
+        -device usb-tablet \
+        -machine type=q35,accel=hvf \
+        -smp 2 \
+        -drive file=$manjaroDriveFile,if=virtio \
+        -cpu host \
+        -full-screen \
+        $2
     ;;
     *)
       echo "\t-u    Ubuntu Qemu-VM\n
