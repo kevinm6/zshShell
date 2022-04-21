@@ -3,7 +3,7 @@
 # Description: K ZSH Shell Functions
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 06/04/2022 - 09:06
+# Last Modified: 21/04/2022 - 10:19
 ############################################
 
 
@@ -82,6 +82,7 @@ mkcd() {
 ## QEMU-VM ##
 ubuntuDriveFile=/Users/Kevin/Linux/Ubuntu/ubuntu.qcow2
 manjaroDriveFile=/Users/Kevin/Linux/Manjaro/manjaro.qcow2
+# ubuntuIso=/Users/Kevin/Linux/Ubuntu/ubuntu.iso
 # manjaroIso=/Users/Kevin/Linux/Manjaro/manjaro.iso
 
 # Qemu-VM starting args
@@ -105,7 +106,7 @@ startQemu() {
   case "$1" in
     "-u")
       echo "\t L starting Ubuntu..."
-      startQemuVM $ubuntuDriveFile
+      startQemuVM $ubuntuDriveFile $ubuntuIso
     ;;
     "-m")
       echo "\t L starting Manjaro..."
