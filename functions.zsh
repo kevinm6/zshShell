@@ -80,15 +80,17 @@ mkcd() {
 
 
 ## QEMU-VM ##
-ubuntuDriveFile=/Users/Kevin/Linux/Ubuntu/ubuntu.qcow2
-manjaroDriveFile=/Users/Kevin/Linux/Manjaro/manjaro.qcow2
+export QEMU=/Users/Kevin/Qemu
+ubuntuDriveFile=$QEMU/Linux/Ubuntu/ubuntu.qcow2
+manjaroDriveFile=$QEMU/Linux/Manjaro/manjaro.qcow2
+windowsDriveFile=$QEMU/Windows/windows.qcow2
 # ubuntuIso=$HOME/Linux/Ubuntu/ubuntu.iso
 # manjaroIso=$HOME/Linux/Manjaro/manjaro.iso
 
 startQemu() {
   echo " Qemu VirtualMachine"
   case "$1" in
-    "-u")
+    "-u" | "--ubuntu")
       echo "\t L starting Ubuntu..."
       qemu-system-x86_64 \
         -m 5G \
@@ -103,7 +105,7 @@ startQemu() {
         -full-screen \
         $2
     ;;
-    "-m")
+    "-m" | "--manjaro")
       echo "\t L starting Manjaro...\n"
       qemu-system-x86_64 \
         -m 5G \
@@ -118,9 +120,24 @@ startQemu() {
         -full-screen \
         $2
     ;;
+    "-w" | "--windows")
+      echo "\t L starting Windows...\n"
+      qemu-system-x86_64 \
+        -m 5G \
+        -vga virtio \
+        -display default,show-cursor=on \
+        -usb \
+        -device usb-tablet \
+        -machine type=q35,accel=hvf \
+        -smp 2 \
+        -drive file=$windowsDriveFile,if=virtio \
+        -cpu host \
+        -full-screen \
+        $2
+    ;;
     *)
-      echo "\t-u    Ubuntu Qemu-VM\n
-      \t-m    Manjaro Qemu-VM"
+      echo "\t-u | --ubuntu    Ubuntu QemuVM\n
+      \t-m | --manjaro   Manjaro QemuVM\n\t-w | --windows Windows QemuVM"
     ;;
   esac
  }
