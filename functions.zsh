@@ -3,7 +3,7 @@
 # Description: K ZSH Shell Functions
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 21/04/2022 - 10:19
+# Last Modified: 27/04/2022 - 20:07
 ############################################
 
 
@@ -81,33 +81,34 @@ mkcd() {
 
 ## QEMU-VM ##
 export QEMU=/Users/Kevin/Qemu
-ubuntuDriveFile=$QEMU/Linux/Ubuntu/ubuntu.qcow2
+# ubuntuDriveFile=$QEMU/Linux/Ubuntu/ubuntu.qcow2
 manjaroDriveFile=$QEMU/Linux/Manjaro/manjaro.qcow2
-windowsDriveFile=$QEMU/Windows/windows.qcow2
+windowsDriveFile=$QEMU/Windows/windows.img
 # ubuntuIso=$HOME/Linux/Ubuntu/ubuntu.iso
 # manjaroIso=$HOME/Linux/Manjaro/manjaro.iso
 
 startQemu() {
   echo " Qemu VirtualMachine"
   case "$1" in
-    "-u" | "--ubuntu")
-      echo "\t L starting Ubuntu..."
-      qemu-system-x86_64 \
-        -m 5G \
-        -vga virtio \
-        -display default,show-cursor=on \
-        -usb \
-        -device usb-tablet \
-        -machine type=q35,accel=hvf \
-        -smp 2 \
-        -drive file=$ubuntuDriveFile,if=virtio \
-        -cpu host \
-        -full-screen \
-        $2
-    ;;
+    # "-u" | "--ubuntu")
+    #   echo "\t L starting Ubuntu..."
+    #   qemu-system-x86_64 \
+    #     -m 5G \
+    #     -vga virtio \
+    #     -display default,show-cursor=on \
+    #     -usb \
+    #     -device usb-tablet \
+    #     -machine type=q35,accel=hvf \
+    #     -smp 2 \
+    #     $2 $3
+    #     -drive file=$ubuntuDriveFile,if=virtio \
+    #     -cpu host \
+    #     -full-screen \
+    # ;;
     "-m" | "--manjaro")
       echo "\t L starting Manjaro...\n"
       qemu-system-x86_64 \
+        -boot c \
         -m 5G \
         -vga virtio \
         -display default,show-cursor=on \
@@ -115,29 +116,30 @@ startQemu() {
         -device usb-tablet \
         -machine type=q35,accel=hvf \
         -smp 2 \
+        $2 $3
         -drive file=$manjaroDriveFile,if=virtio \
         -cpu host \
-        -full-screen \
-        $2
+        -full-screen
     ;;
     "-w" | "--windows")
       echo "\t L starting Windows...\n"
-      qemu-system-x86_64 \
-        -m 5G \
-        -vga virtio \
-        -display default,show-cursor=on \
-        -usb \
-        -device usb-tablet \
-        -machine type=q35,accel=hvf \
-        -smp 2 \
-        -drive file=$windowsDriveFile,if=virtio \
-        -cpu host \
-        -full-screen \
-        $2
+     qemu-system-x86_64 \
+       -boot c \
+       -cpu Nehalem,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time \
+       -device usb-tablet -device virtio-serial \
+       -display default,show-cursor=on \
+       -drive file=$windowsDriveFile \
+       -m 4G -machine type=q35,accel=hvf \
+       -netdev user,id=network01,hostfwd=tcp::5555-:3389 \
+       -device e1000e,netdev=network01 \
+       -rtc base=localtime,clock=host \
+       -smp 2 -usb -vga virtio \
+       -full-screen
     ;;
     *)
-      echo "\t-u | --ubuntu    Ubuntu QemuVM\n
-      \t-m | --manjaro   Manjaro QemuVM\n\t-w | --windows Windows QemuVM"
+      # echo "\t-u | --ubuntu    Ubuntu QemuVM\n
+      echo "\t-m | --manjaro   Manjaro QemuVM\n
+      \t-w | --windows Windows QemuVM"
     ;;
   esac
  }
