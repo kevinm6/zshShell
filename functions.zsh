@@ -125,7 +125,8 @@ startQemu() {
       echo "\t L starting Windows...\n"
      qemu-system-x86_64 \
        -boot c \
-       -cpu Nehalem,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time \
+       # -cpu Nehalem if not working host
+       -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time \
        -device usb-tablet -device virtio-serial \
        -display default,show-cursor=on \
        -drive file=$windowsDriveFile \

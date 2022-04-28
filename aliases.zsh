@@ -3,7 +3,7 @@
 # Description: K ZSH shell aliases
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/blob/zsh/aliases.zsh
-# Last Modified: 23/03/2022 - 16:31
+# Last Modified: 28/04/2022 - 11:24
 ############################################
 
 
@@ -17,10 +17,10 @@ alias -s m3u8=iina
 # VARIOUS TERMINAL
 alias l="ls_extended"
 alias ls="ls_extended"
-alias lsa="ls_extended -aG"
+alias lsa="ls_extended -AG"
 alias "ls -a"="ls_extended -aG"
 alias lol="ls_extended -1G"
-alias ll="ls_extended -alh"
+alias ll="ls_extended -Alh"
 alias c="clear"
 alias cdc="cd && clear"
 alias ".."="cd .."
