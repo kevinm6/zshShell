@@ -108,17 +108,15 @@ startQemu() {
     "-m" | "--manjaro")
       echo "\t L starting Manjaro...\n"
       qemu-system-x86_64 \
-        -boot c \
         -m 5G \
         -vga virtio \
         -display default,show-cursor=on \
+        -cpu host \
         -usb \
         -device usb-tablet \
         -machine type=q35,accel=hvf \
         -smp 2 \
-        $2 $3
         -drive file=$manjaroDriveFile,if=virtio \
-        -cpu host \
         -full-screen
     ;;
     "-w" | "--windows")
@@ -133,6 +131,7 @@ startQemu() {
        -m 4G -machine type=q35,accel=hvf \
        -netdev user,id=network01,hostfwd=tcp::5555-:3389 \
        -device e1000e,netdev=network01 \
+       -soundhw all \ 
        -rtc base=localtime,clock=host \
        -smp 2 -usb -vga virtio \
        -full-screen
