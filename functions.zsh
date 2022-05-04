@@ -3,7 +3,7 @@
 # Description: K ZSH Shell Functions
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 27/04/2022 - 20:07
+# Last Modified: 04/05/2022 - 09:35
 ############################################
 
 
@@ -122,19 +122,19 @@ startQemu() {
     "-w" | "--windows")
       echo "\t L starting Windows...\n"
      qemu-system-x86_64 \
-       -boot c \
-       # -cpu Nehalem if not working host
-       -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time \
+       -cpu Nehalem,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time \
        -device usb-tablet -device virtio-serial \
        -display default,show-cursor=on \
        -drive file=$windowsDriveFile \
        -m 4G -machine type=q35,accel=hvf \
        -netdev user,id=network01,hostfwd=tcp::5555-:3389 \
        -device e1000e,netdev=network01 \
-       -soundhw all \ 
        -rtc base=localtime,clock=host \
        -smp 2 -usb -vga virtio \
-       -full-screen
+       -full-screen \
+       # -boot d \
+       # -audiodev id=coreaudio,driver=coreaudio
+       # -cpu Nehalem if not working host
     ;;
     *)
       # echo "\t-u | --ubuntu    Ubuntu QemuVM\n

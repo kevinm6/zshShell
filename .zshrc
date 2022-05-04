@@ -3,7 +3,7 @@
 # Description:  ZSH Shell with iTerm2
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/
-# Last Modified: 22/03/2022 - 09:45
+# Last Modified: 04/05/2022 - 09:34
 ############################################
 
 
@@ -74,5 +74,11 @@ plugins=(
   h-autosuggestions
 )
 
-test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
 
+# kitty-integration
+if [[ -n $KITTY_INSTALLATION_DIR ]]; then
+  export KITTY_SHELL_INTEGRATION="enabled"
+  autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
+  kitty-integration
+  unfunction kitty-integration
+fi
