@@ -3,7 +3,7 @@
 # Description: K ZSH shell aliases
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/blob/zsh/aliases.zsh
-# Last Modified: 28/04/2022 - 11:24
+# Last Modified: 12/05/2022 - 19:23
 ############################################
 
 
@@ -36,6 +36,7 @@ alias vi="nvim"
 alias vr="vimr"
 alias rmh="rm $HOME/.cache/.zsh_history"
 alias cpwd="echo $PWD | pbcopy"
+alias pgrep="pgrep -l"
 alias python="/usr/local/opt/python/libexec/bin/python/"
 
 # APPS
