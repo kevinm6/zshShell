@@ -81,7 +81,6 @@ export PATH="/usr/local/opt/python/bin:$PATH"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc.py"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/.jupyter"
-# export PATH="$HOME/.local/share/nvim/lsp_servers/python/node_modules/pyright/dist/:$PATH"
 
 
 # JAVA
@@ -90,26 +89,23 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export JTDLS_HOME="$HOME/.local/share/nvim/lsp_servers/jdtls"
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
 
-# PERL
-export PERL_HOME="$HOME/.cache/.cpan"
-
 # GO
 export GOPATH="$XDG_CONFIG_HOME/go"
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 
-# LUA
-# export PATH="$PATH:$HOME/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin"
-
 # POSTGRES
 export PATH="$PATH:/usr/local/opt/postgresql@13/bin"
 export PSQL_HISTORY="$HOME/.cache/.psql_history"
 
-# Mono framework
-export PATH="$PATH:/Library/Frameworks/Mono.framework/Versions/Current/Commands"
+# PERL
+export PERL_HOME="$HOME/.cache/.cpan"
 
 # RUBY
 export GEM_HOME="$HOME/.cache/.gem"
+
+# Mono framework
+export PATH="$PATH:/Library/Frameworks/Mono.framework/Versions/Current/Commands"
 
 # Source zsh highlight
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/local/share/zsh-syntax-highlighting/highlighters/"
