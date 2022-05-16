@@ -3,7 +3,7 @@
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
 # Source: https://github.com/kevinm6/zsh/blob/zsh/.zshenv
-# Last Modified: 10/05/2022 - 10:50
+# Last Modified: 16/05/2022 - 12:17
 ############################################
 
 
@@ -31,11 +31,12 @@ export HOMEBREW_BUNDLE_FILE="$HOME/.MacDotfiles/Brewfile"
 export EDITOR=nvim
 export VISUAL=vimr
 export BROWSER="/Applications/Safari.app"
-export CS="$HOME/Documents/@M&K/Personal/Kevin/Informatica"
+export CS="$HOME/Documents/@M&K/Personal/Kevin/Informatica/"
 export DOTFILES="$HOME/.MacDotfiles"
 
 # ZSH & Base Directories
 export XDG_CONFIG_HOME="/Users/Kevin/.config"
+export XDG_LOCAL_HOME="/Users/Kevin/.local"
 export XDG_CACHE_HOME="/Users/Kevin/.cache"
 export ZDOTDIR="$XDG_CONFIG_HOME/.zsh"
 export BINBACKPATH="$HOME/.local/bin"
