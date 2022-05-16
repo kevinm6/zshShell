@@ -91,7 +91,7 @@ mkcd() {
 export QEMU=/Users/Kevin/Qemu
 # ubuntuDriveFile=$QEMU/Linux/Ubuntu/ubuntu.qcow2
 manjaroDriveFile=$QEMU/Linux/Manjaro/manjaro.qcow2
-windowsDriveFile=$QEMU/Windows/windows.img
+# windowsDriveFile=$QEMU/Windows/windows.img
 # ubuntuIso=$HOME/Linux/Ubuntu/ubuntu.iso
 # manjaroIso=$HOME/Linux/Manjaro/manjaro.iso
 
@@ -122,28 +122,29 @@ startQemu() {
         -cpu host \
         -usb \
         -device usb-tablet \
+        -device intel-hda -device hda-duplex \
         -machine type=q35,accel=hvf \
         -smp 2 \
-        -drive file=$manjaroDriveFile,if=virtio \
+        -drive file=$manjaroDriveFile,fmt=qcow2,if=virtio \
         -full-screen
     ;;
-    "-w" | "--windows")
-      echo "\t L starting Windows...\n"
-     qemu-system-x86_64 \
-       -cpu Nehalem,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time \
-       -device usb-tablet -device virtio-serial \
-       -display default,show-cursor=on \
-       -drive file=$windowsDriveFile \
-       -m 4G -machine type=q35,accel=hvf \
-       -netdev user,id=network01,hostfwd=tcp::5555-:3389 \
-       -device e1000e,netdev=network01 \
-       -rtc base=localtime,clock=host \
-       -smp 2 -usb -vga virtio \
-       -full-screen \
-       # -boot d \
-       # -audiodev id=coreaudio,driver=coreaudio
-       # -cpu Nehalem if not working host
-    ;;
+    # "-w" | "--windows")
+    #   echo "\t L starting Windows...\n"
+    #  qemu-system-x86_64 \
+    #    -cpu Nehalem,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time \
+    #    -device usb-tablet -device virtio-serial \
+    #    -display default,show-cursor=on \
+    #    -drive file=$windowsDriveFile \
+    #    -m 4G -machine type=q35,accel=hvf \
+    #    -netdev user,id=network01,hostfwd=tcp::5555-:3389 \
+    #    -device e1000e,netdev=network01 \
+    #    -rtc base=localtime,clock=host \
+    #    -smp 2 -usb -vga virtio \
+    #    -full-screen \
+    #    # -boot d \
+    #    # -audiodev id=coreaudio,driver=coreaudio
+    #    # -cpu Nehalem if not working host
+    # ;;
     *)
       # echo "\t-u | --ubuntu    Ubuntu QemuVM\n
       echo "\t-m | --manjaro   Manjaro QemuVM\n
