@@ -2,8 +2,7 @@
 # File: functions.zsh
 # Description: K ZSH Shell Functions
 # Author: Kevin
-# Source: https://github.com/kevinm6/zsh/
-# Last Modified: 04/05/2022 - 09:35
+# Last Modified: 31/05/2022 - 09:40
 ############################################
 
 
@@ -125,7 +124,7 @@ startQemu() {
         -device intel-hda -device hda-duplex \
         -machine type=q35,accel=hvf \
         -smp 2 \
-        -drive file=$manjaroDriveFile,fmt=qcow2,if=virtio \
+        -drive file=$manjaroDriveFile,if=virtio \
         -full-screen
     ;;
     # "-w" | "--windows")
@@ -162,7 +161,7 @@ edvi() {	# edit vim config file
   echo -e "\t\e[32m✔\e[0m Vim Configuration updated"
 }
 
-ednvi() { # edit neovim config file
+ednv() { # edit neovim config file
   cd $NVIMDOTDIR
   nvim ./init.lua && nvim -c "source ./init.lua" -c "q" || echo "⚠️  Error editing file"
   echo -e "\t\e[32m✔\e[0m NeoVim Configuration updated"

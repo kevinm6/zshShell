@@ -2,8 +2,7 @@
 # File: .zshrc
 # Description:  ZSH Shell with iTerm2
 # Author: Kevin
-# Source: https://github.com/kevinm6/zsh/
-# Last Modified: 04/05/2022 - 09:34
+# Last Modified: 31/05/2022 - 09:41
 ############################################
 
 

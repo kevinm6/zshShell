@@ -2,8 +2,7 @@
 # File: aliases.zsh
 # Description: K ZSH shell aliases
 # Author: Kevin
-# Source: https://github.com/kevinm6/zsh/blob/zsh/aliases.zsh
-# Last Modified: 12/05/2022 - 19:23
+# Last Modified: 31/05/2022 - 09:38
 ############################################
 
 
