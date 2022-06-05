@@ -2,7 +2,7 @@
 # File: functions.zsh
 # Description: K ZSH Shell Functions
 # Author: Kevin
-# Last Modified: 31/05/2022 - 09:40
+# Last Modified: 05/06/2022 - 11:55
 ############################################
 
 
@@ -32,7 +32,21 @@ ql() {
 # get version of a given app
 version(){
   for ap in $@; do
-    appVersion=$(defaults read /$ap/Contents/Info.plist CFBundleShortVersionString)
+    path1=$([ -d /Applications/$ap.app ] && echo "/Applications/$ap.app")
+    path2=$([ -d /System/Applications/$ap.app ] && echo "/System/Applications/$ap.app")
+
+    realAppPath=$(
+    ([ -z "$path1" ] && [ ! -z "$path2" ]) && echo "$path2" ||
+      ([ -z "$path2" ] && [ ! -z "$path1" ]) && echo "$path1" || echo "Error"
+    )
+
+    # If Error (app not found), exit
+    [[ $realAppPath = "Error" ]] && echo "\tError: < $ap > not found!" && return
+
+    echo "$realAppPath"
+
+    echo "\tFull path of < $ap >: \e[32m$realAppPath\e[0m"
+    appVersion=$(defaults read $realAppPath/Contents/Info.plist CFBundleShortVersionString)
     echo -e "\t↳  $(basename $ap)  ->  \e[32m$appVersion\e[0m"
   done
 }
@@ -44,10 +58,10 @@ lsv() {
 }
 
 rmv() {
-  if [ -z $@ ]; then
+  if [ -z "$@" ]; then
     ls /Volumes/ | grep -Ev "KevinSSD 480Gb|KevinSSD support|usb1_*|Cinema|Music"
   else
-    for d in $@; do
+    for d in "$@"; do
       echo "   " && diskutil umount "$d"
     done
   fi

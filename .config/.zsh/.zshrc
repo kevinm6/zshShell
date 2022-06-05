@@ -1,10 +1,9 @@
 ############################################
 # File: .zshrc
-# Description:  ZSH Shell with iTerm2
+# Description:  ZSH Shell (using Kitty Terminal kitty 'https://sw.kovidgoyal.net/kitty')
 # Author: Kevin
-# Last Modified: 31/05/2022 - 09:41
+# Last Modified: 05/06/2022 - 10:29
 ############################################
-
 
 # Vim mode
 bindkey -v # enable vi mode and set it to main
@@ -35,7 +34,7 @@ sources=(
   [ALIASES]="$ZDOTDIR/aliases.zsh"
   [FUNCTIONS]="$ZDOTDIR/functions.zsh"
   [PROMPT]="$ZDOTDIR/prompt.zsh"
-  [AUTOSUGGESTION]="/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+  [AUTOSUGGESTION]=$(brew --prefix)"/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 )
 
 for key value in ${(kv)sources}; do
@@ -47,7 +46,7 @@ done
 # HISTORY CONFIGURATION
 HISTSIZE=6000
 SAVEHIST=6000
-HISTFILE="$HOME/.cache/.zsh_history"
+HISTFILE="$XDG_CACHE_HOME/.zsh_history"
 
 # Basic auto/tab complete
 autoload -Uz compinit

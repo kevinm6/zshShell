@@ -2,7 +2,6 @@
 # File: options.zsh
 # Description: K ZSH Shell options
 # Author: Kevin
-# Source: https://github.com/kevinm6/zsh/blob/zsh/options.zsh
 # Last Modified: 18/03/2022 - 10:21
 ############################################
 

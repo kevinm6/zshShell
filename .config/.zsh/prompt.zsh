@@ -2,7 +2,6 @@
 # File: prompt.zsh
 # Description: K ZSH Shell prompt
 # Author: Kevin
-# Source: https://github.com/kevinm6/zsh/
 # Last Modified: 18/03/2022 - 10:21
 ############################################
 

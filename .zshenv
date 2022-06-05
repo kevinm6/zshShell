@@ -2,7 +2,6 @@
 # File: .zshenv
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
-# Source: https://github.com/kevinm6/zsh/blob/zsh/.zshenv
 # Last Modified: 16/05/2022 - 12:17
 ############################################
 

@@ -2,7 +2,7 @@
 # File: aliases.zsh
 # Description: K ZSH shell aliases
 # Author: Kevin
-# Last Modified: 31/05/2022 - 09:38
+# Last Modified: 03/06/2022 - 08:51
 ############################################
 
 
@@ -37,6 +37,7 @@ alias rmh="rm $HOME/.cache/.zsh_history"
 alias cpwd="echo $PWD | pbcopy"
 alias pgrep="pgrep -l"
 alias python="/usr/local/opt/python/libexec/bin/python/"
+alias icat="kitty +kitten icat --align=left"
 
 # APPS
 alias preview="open -a Preview"
