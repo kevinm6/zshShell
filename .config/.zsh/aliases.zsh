@@ -2,7 +2,7 @@
 # File: aliases.zsh
 # Description: K ZSH shell aliases
 # Author: Kevin
-# Last Modified: 03/06/2022 - 08:51
+# Last Modified: 08 Jun 2022, 08:56
 ############################################
 
 
@@ -32,6 +32,8 @@ alias oe="open -e"
 alias ka="killall"
 alias nv="nvim"
 alias vi="nvim"
+alias vim="nvim"
+alias snvim="sudo -E nvim"
 alias vr="vimr"
 alias rmh="rm $HOME/.cache/.zsh_history"
 alias cpwd="echo $PWD | pbcopy"

@@ -2,7 +2,6 @@
 # File: binds.zsh
 # Description: K keybinds zsh shell
 # Author: Kevin
-# Source: https://github.com/kevinm6/zsh/
 # Last Modified: 18/03/2022 - 10:19
 ############################################
 
