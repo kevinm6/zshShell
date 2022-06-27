@@ -2,7 +2,7 @@
 # File: aliases.zsh
 # Description: K ZSH shell aliases
 # Author: Kevin
-# Last Modified: 08 Jun 2022, 08:56
+# Last Modified: 27 Jun 2022, 09:24
 ############################################
 
 
@@ -14,11 +14,10 @@ alias -s pdf=preview
 alias -s m3u8=iina
 
 # VARIOUS TERMINAL
-alias l="ls_extended"
+alias l="ls_extended -1G"
 alias ls="ls_extended"
 alias lsa="ls_extended -AG"
 alias "ls -a"="ls_extended -aG"
-alias lol="ls_extended -1G"
 alias ll="ls_extended -Alh"
 alias c="clear"
 alias cdc="cd && clear"
@@ -32,6 +31,7 @@ alias oe="open -e"
 alias ka="killall"
 alias nv="nvim"
 alias vi="nvim"
+alias nv8="~/.local/nvim-macos/bin/nvim"
 alias vim="nvim"
 alias snvim="sudo -E nvim"
 alias vr="vimr"

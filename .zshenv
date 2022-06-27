@@ -2,9 +2,8 @@
 # File: .zshenv
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
-# Last Modified: 16/05/2022 - 12:17
+# Last Modified: 26 Jun 2022, 12:16
 ############################################
-
 
 # SHELL
 export SHELL=/bin/zsh
@@ -15,6 +14,8 @@ export PATH="$PATH:/Library/Apple/usr/bin" #"/usr/local/opt/coreutils/libexec/gn
 export PATH="/usr/local/clamav/bin:/usr/local/clamav/sbin:$PATH"
 #export DISPLAY="DISPLAY 0.0"
 export KITTY_CONFIG_DIRECTORY="$HOME/.MacDotfiles/kitty/.config/kitty"
+
+export WINEPREFIX=~/.wine64 WINEARCH=win64 winecfg
 
 # Homebrew
 export HOMEBREW_BAT=true

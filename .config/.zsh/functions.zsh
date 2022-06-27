@@ -2,7 +2,7 @@
 # File: functions.zsh
 # Description: K ZSH Shell Functions
 # Author: Kevin
-# Last Modified: 05/06/2022 - 11:55
+# Last Modified: 27 Jun 2022, 09:59
 ############################################
 
 
@@ -99,6 +99,25 @@ mkcd() {
   mkdir -p "$@" && cd "$_"
 }
 
+emptyTrash() {
+  rm -rf ~/.Trash/*
+}
+
+updateNvimNightly() {
+  cd ~/.local
+  echo -e " \e[35m Removing old files...\e[0m" &&
+    rm -rf ~/.local/nvim-macos
+
+  echo -e " \e[33m\e[0m  Downloading Neovim Nightly..." &&
+    curl -LO --progress-bar 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz'
+
+  echo -e " \e[33m\e[0m  Extracting and cleanup Neovim Nightly...";
+  tar xzf nvim-macos.tar.gz && rm -rf nvim-macos.tar.gz
+
+  echo -e " \e[32m Done\e[0m"
+  cd
+}
+
 
 ## QEMU-VM ##
 export QEMU=/Users/Kevin/Qemu
@@ -192,7 +211,7 @@ ednano() {
 
 # ADBLOCK
 edadb() { #AdBlock Functions (hBlock)
-  sudo -E vim /etc/hblock/sources.list &&
+  sudo -E nvim $XDG_CONFIG_HOME/hblock/sources.list &&
     hblock
 }
 
