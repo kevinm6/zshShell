@@ -2,7 +2,7 @@
 # File: .zshenv
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
-# Last Modified: 26 Jun 2022, 12:16
+# Last Modified: 01 Jul 2022, 09:50
 ############################################
 
 # SHELL
@@ -79,7 +79,6 @@ export LESSHISTFILE=-
 # PYTHON
 export PYTHON="/usr/local/opt/python/bin"
 export PATH="/usr/local/opt/python/bin:$PATH"
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc.py"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/.jupyter"
 

@@ -2,7 +2,7 @@
 # File: .zshrc
 # Description:  ZSH Shell (using Kitty Terminal kitty 'https://sw.kovidgoyal.net/kitty')
 # Author: Kevin
-# Last Modified: 05/06/2022 - 10:29
+# Last Modified: 30 Jun 2022, 10:25
 ############################################
 
 # Vim mode
@@ -42,6 +42,12 @@ for key value in ${(kv)sources}; do
 		source $value || echo "\t ⚠️  $key File not found!"
 done
 
+# Case sensitive for autocompletion
+CASE_SENSITIVE="true"
+
+COMPLETION_WAITING_DOTS="true"
+
+DISABLE_AUTO_TITLE="true"
 
 # HISTORY CONFIGURATION
 HISTSIZE=6000
@@ -63,6 +69,7 @@ fi
 
 # PLUGINS
 plugins=(
+  git
   vim
   brew
   man
