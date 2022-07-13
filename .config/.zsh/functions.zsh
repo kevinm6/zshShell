@@ -2,7 +2,7 @@
 # File: functions.zsh
 # Description: K ZSH Shell Functions
 # Author: Kevin
-# Last Modified: 27 Jun 2022, 09:59
+# Last Modified: 13 Jul 2022, 12:52
 ############################################
 
 
@@ -104,19 +104,54 @@ emptyTrash() {
 }
 
 updateNvimNightly() {
-  cd ~/.local
+  local dir=~/.local/nvim_macos/nightly/
+  cd $dir
   echo -e " \e[35m Removing old files...\e[0m" &&
-    rm -rf ~/.local/nvim-macos
+    rm -rf nvim-macos/
 
   echo -e " \e[33m\e[0m  Downloading Neovim Nightly..." &&
-    curl -LO --progress-bar 'https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz'
+    curl -LO --progress-bar "https://github.com/neovim/neovim/releases/download/nightly/nvim-macos.tar.gz"
 
   echo -e " \e[33m\e[0m  Extracting and cleanup Neovim Nightly...";
+  xattr -c nvim-macos.tar.gz
   tar xzf nvim-macos.tar.gz && rm -rf nvim-macos.tar.gz
+  ln -sf ~/.local/nvim_macos/nightly/nvim-macos/bin/nvim ~/.local/bin/nvimNightly
 
   echo -e " \e[32m Done\e[0m"
   cd
 }
+
+updateNvimStable() {
+  local dir=~/.local/nvim_macos/stable/
+  cd $dir
+
+  local v=""
+  [ -e ./version ] && local v=$(read -rE < ./version)
+
+  local owner=neovim project=neovim
+  local release_url=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/$owner/$project/releases/latest)
+  local release_tag=$(basename $release_url)
+
+  [[ "$v" == "$release_tag" ]] && echo -e "\e[32m   NeoVim is up to date ($release_tag)\e[0m" && return
+  
+  echo -e " \e[35m Removing old files...\e[0m" &&
+    rm -rf nvim-macos/
+
+  echo -e " \e[33m\e[0m  Downloading Neovim Stable..."
+  local url="https://github.com/neovim/neovim/releases/download/$release_tag/nvim-macos.tar.gz"
+  curl -LO --progress-bar "https://github.com/neovim/neovim/releases/download/$release_tag/nvim-macos.tar.gz"
+
+  echo -e " \e[33m\e[0m  Extracting and cleanup Neovim Stable ($release_tag) ...";
+  xattr -c nvim-macos.tar.gz
+  tar xzf nvim-macos.tar.gz && rm -rf nvim-macos.tar.gz
+  ln -sf ~/.local/nvim_macos/stable/nvim-macos/bin/nvim ~/.local/bin/nvim_$release_tag
+  echo "$release_tag" > ~/.local/nvim_macos/stable/version
+
+  echo -e " \e[32m Done\e[0m"
+  cd
+}
+
+
 
 
 ## QEMU-VM ##
@@ -219,11 +254,7 @@ edadb() { #AdBlock Functions (hBlock)
 # GIT
 # git add files in dir and commit /w msg
 gac() {
-  if [[ -z $@ ]]
-  then
-    echo "⚠️  Error, No given files!"
-    return
-  fi
+  [[ -z $@ ]] && echo "⚠️  Error, No given files!"  && return
   git add ${@} && msg="" || return
 
   echo -en "\n\e[33m    Commit message: \e[0m \e[91m" && read msg
@@ -258,23 +289,32 @@ gacap(){
   git status
 }
 
+# Git clone latest release of repo
+gitCloneLatest() {
+  [ -z "$@" ] && echo " Git clone latest release:\n\t enter <owner> <project>"
+  local owner=$1 project=$2
+  local output_directory=${3:-$owner-$project-release}
+  local release_url=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/$owner/$project/releases/latest)
+  local release_tag=$(basename $release_url)
+  git clone -b $release_tag -- https://github.com/$owner/$project.git $output_directory
+}
 
 # PROGRESS BAR
-progress-bar() {
-  local duration=${1}
-
-  already_done() { for ((done=0; done<$elapsed; done++)); do printf "▇"; done }
-  remaining() { for ((remain=$elapsed; remain<$duration; remain++)); do printf " "; done }
-  percentage() { printf "| %s%%" $(( (($elapsed)*100)/($duration)*100/100 )); }
-  clean_line() { printf "\r"; }
-
-  for (( elapsed=1; elapsed<=$duration; elapsed++ )); do
-    already_done; remaining; percentage
-    sleep 1
-    clean_line
-  done
-  clean_line
-}
+# progress-bar() {
+#   local duration=${1}
+#
+#   already_done() { for ((done=0; done<$elapsed; done++)); do printf "▇"; done }
+#   remaining() { for ((remain=$elapsed; remain<$duration; remain++)); do printf " "; done }
+#   percentage() { printf "| %s%%" $(( (($elapsed)*100)/($duration)*100/100 )); }
+#   clean_line() { printf "\r"; }
+#
+#   for (( elapsed=1; elapsed<=$duration; elapsed++ )); do
+#     already_done; remaining; percentage
+#     sleep 1
+#     clean_line
+#   done
+#   clean_line
+# }
 
 # pip zsh completion start
 function _pip_completion {

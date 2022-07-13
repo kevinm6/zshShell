@@ -2,7 +2,7 @@
 # File: aliases.zsh
 # Description: K ZSH shell aliases
 # Author: Kevin
-# Last Modified: 01 Jul 2022, 09:29
+# Last Modified: 13 Jul 2022, 11:55
 ############################################
 
 
@@ -27,14 +27,11 @@ alias ZQ="exit"
 alias hh="history"
 alias oa="open -a"
 alias o="open"
-alias oe="open -e"
+# open with default text editor ($EDITOR = nvim)
+alias oe="open -t"
 alias ka="killall"
-alias nv="nvim"
-alias vi="nvim"
-alias nv8="~/.local/nvim-macos/bin/nvim"
-alias vim="nvim"
+alias {nv,vi,vim}="nvim"
 alias snvim="sudo -E nvim"
-alias vr="vimr"
 alias rmh="rm $HOME/.cache/.zsh_history"
 alias cpwd="echo $PWD | pbcopy"
 alias pgrep="pgrep -l"
