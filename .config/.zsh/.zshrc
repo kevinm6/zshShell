@@ -2,7 +2,7 @@
 # File: .zshrc
 # Description:  ZSH Shell (using Kitty Terminal kitty 'https://sw.kovidgoyal.net/kitty')
 # Author: Kevin
-# Last Modified: 30 Jun 2022, 10:25
+# Last Modified: 16 Jul 2022, 15:29
 ############################################
 
 # Vim mode
@@ -86,4 +86,15 @@ if [[ -n $KITTY_INSTALLATION_DIR ]]; then
   autoload -Uz -- "$KITTY_INSTALLATION_DIR"/shell-integration/zsh/kitty-integration
   kitty-integration
   unfunction kitty-integration
+fi
+
+
+
+if hash nvim 2>/dev/null; then
+  export EDITOR=nvim
+
+  # Use nvim as manpager `:h Man`
+  export MANPAGER='nvim +Man!'
+else
+  export EDITOR=vim
 fi

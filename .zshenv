@@ -2,7 +2,7 @@
 # File: .zshenv
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
-# Last Modified: 14 Jul 2022, 09:47
+# Last Modified: 17 Jul 2022, 11:42
 ############################################
 
 # SHELL
@@ -88,7 +88,8 @@ export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/.jupyter"
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export JTDLS_HOME="$HOME/.local/share/nvim/lsp_servers/jdtls"
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
-export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/nvim/lsp_servers/jdtls/lombok.jar"
+export JAVA_HOME="/usr/local/opt/java/libexec/openjdk.jdk"
+export JAVA_11_HOME="/usr/local/opt/java11/libexec/openjdk.jdk"
 
 # GO
 export GOPATH="$XDG_CONFIG_HOME/go"

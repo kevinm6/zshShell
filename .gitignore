@@ -8,3 +8,5 @@
 .zcompcache/brew_casks
 .zcompcache/brew_formulae
 .zcompdump*
+
+.config/.DS_Store

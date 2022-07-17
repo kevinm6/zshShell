@@ -2,7 +2,7 @@
 # File: aliases.zsh
 # Description: K ZSH shell aliases
 # Author: Kevin
-# Last Modified: 13 Jul 2022, 11:55
+# Last Modified: 17 Jul 2022, 11:54
 ############################################
 
 
@@ -57,8 +57,7 @@ alias brs="brew search"
 alias brcu="brew cu -a --cleanup"
 
 # JAVA
-alias java11="export JAVA_HOME=$JAVA_11_HOME"
-
+alias java11="/usr/local/opt/java11/bin/java"
 
 # HBLOCK
 alias adb=hblock

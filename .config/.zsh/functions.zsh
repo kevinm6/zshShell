@@ -83,13 +83,6 @@ edenv() {
       echo -e "\t\e[32m✔\e[0m  Zsh Configuration updated and sourced"
 }
 
-edzp() {
-    cd ~/.config/.zsh/
-    nvim ~/.config/.zsh/.zprofile &&
-      exec zsh
-          echo -e "\t\e[32m✔\e[0m  Zsh Profile updated and sourced"
-}
-
 
 zreload() {
  exec zsh
