@@ -2,7 +2,7 @@
 # File: aliases.zsh
 # Description: K ZSH shell aliases
 # Author: Kevin
-# Last Modified: 17 Jul 2022, 11:54
+# Last Modified: 18 Jul 2022, 21:15
 ############################################
 
 
@@ -10,7 +10,7 @@
 alias -s json=$VISUAL
 alias -s txt=$EDITOR
 alias -s md=$EDITOR
-alias -s pdf=preview
+alias -s pdf=sioyek
 alias -s m3u8=iina
 
 # VARIOUS TERMINAL

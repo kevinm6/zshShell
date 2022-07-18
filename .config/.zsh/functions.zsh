@@ -2,12 +2,11 @@
 # File: functions.zsh
 # Description: K ZSH Shell Functions
 # Author: Kevin
-# Last Modified: 13 Jul 2022, 12:52
+# Last Modified: 18 Jul 2022, 21:16
 ############################################
 
 
 # DO NOT DISTURB
-
 ## ON ##
 dndOn() {
   defaults -currentHost write com.apple.notificationcenterui doNotDisturb -bool true
@@ -96,6 +95,7 @@ emptyTrash() {
   rm -rf ~/.Trash/*
 }
 
+# NeoVim directly downloads
 updateNvimNightly() {
   local dir=~/.local/nvim_macos/nightly/
   cd $dir
@@ -110,8 +110,7 @@ updateNvimNightly() {
   tar xzf nvim-macos.tar.gz && rm -rf nvim-macos.tar.gz
   ln -sf ~/.local/nvim_macos/nightly/nvim-macos/bin/nvim ~/.local/bin/nvimNightly
 
-  echo -e " \e[32m Done\e[0m"
-  cd
+  echo -e " \e[32m Done\e[0m" && cd
 }
 
 updateNvimStable() {
@@ -140,12 +139,8 @@ updateNvimStable() {
   ln -sf ~/.local/nvim_macos/stable/nvim-macos/bin/nvim ~/.local/bin/nvim_$release_tag
   echo "$release_tag" > ~/.local/nvim_macos/stable/version
 
-  echo -e " \e[32m Done\e[0m"
-  cd
+  echo -e " \e[32m Done\e[0m" && cd
 }
-
-
-
 
 ## QEMU-VM ##
 export QEMU=/Users/Kevin/Qemu
@@ -212,7 +207,6 @@ startQemu() {
     ;;
   esac
  }
-
 
 
 # VIM
@@ -291,6 +285,12 @@ gitCloneLatest() {
   local release_tag=$(basename $release_url)
   git clone -b $release_tag -- https://github.com/$owner/$project.git $output_directory
 }
+
+# Sioyek
+sioyek() {
+  /Applications/sioyek.app/Contents/MacOS/sioyek "$@" &> /dev/null
+}
+
 
 # PROGRESS BAR
 # progress-bar() {
