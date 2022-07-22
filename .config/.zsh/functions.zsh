@@ -2,7 +2,7 @@
 # File: functions.zsh
 # Description: K ZSH Shell Functions
 # Author: Kevin
-# Last Modified: 18 Jul 2022, 21:16
+# Last Modified: 22 Jul 2022, 09:32
 ############################################
 
 
@@ -124,7 +124,7 @@ updateNvimStable() {
   local release_url=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/$owner/$project/releases/latest)
   local release_tag=$(basename $release_url)
 
-  [[ "$v" == "$release_tag" ]] && echo -e "\e[32m   NeoVim is up to date ($release_tag)\e[0m" && return
+  [[ "$v" == "$release_tag" ]] && echo -e "\e[32m   NeoVim is up to date ($release_tag)\e[0m" && cd; return
   
   echo -e " \e[35m Removing old files...\e[0m" &&
     rm -rf nvim-macos/
@@ -291,6 +291,44 @@ sioyek() {
   /Applications/sioyek.app/Contents/MacOS/sioyek "$@" &> /dev/null
 }
 
+# FreshRSS
+freshRSS() {
+  [ -z "$1" ] &&
+    echo "   FreshRSS\n    -on | on    Turn on FreshRSS\n    -off    Turn off FreshRSS"
+
+  ! type brew &> /dev/null &&
+    echo -e "[91m⚠️   Can't find Homebrew... Exit!"\e[0m && return
+
+  case $1 in
+    "-on"|"on"|"ON"|"-ON")
+      # FreshRSS instance url (local IP MBPro)
+      url="http://192.168.1.100:90/i/"
+
+      echo -e "\e[32m   ✓ Turning on FreshRSS and its services...\e[0m"
+      
+      # Start brew services (php, postgres, httpd)
+      brew services start httpd &&
+        brew services start php &&
+          brew services start postgres
+      
+      # Open website with Safari
+      open -a Safari $url
+      echo -e "\e[32m   ✓ Done\e[0m"
+
+    ;;
+    "-off"|"off"|"OFF"|"-OFF")
+      # Stop brew services (php, postgres, httpd)
+      brew services stop httpd &&
+        brew services stop php &&
+          brew services stop postgres
+      
+      echo -e "\e[32m   ✓ FreshRSS stopped\e[0m"
+    ;;
+    *)
+      echo -e "\e[31m   FreshRSS\n\t  -on | on\tTurn on FreshRSS\n\t  -off | off\tTurn off FreshRSS\e[0m"
+    ;;
+  esac
+}
 
 # PROGRESS BAR
 # progress-bar() {
