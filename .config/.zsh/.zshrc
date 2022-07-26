@@ -2,7 +2,7 @@
 # File: .zshrc
 # Description:  ZSH Shell (using Kitty Terminal kitty 'https://sw.kovidgoyal.net/kitty')
 # Author: Kevin
-# Last Modified: 16 Jul 2022, 15:29
+# Last Modified: 26 Jul 2022, 09:41
 ############################################
 
 # Vim mode
@@ -14,16 +14,11 @@ export KEYTIMEOUT=1 # timeout for keybinds
 autoload zmv
 autoload -U colors && colors
 autoload -Uz vcs_info
+autoload -Uz edit-command-line; zle -N edit-command-line
 
-autoload -Uz compinit
-zstyle ':completion:*' menu select
 zmodload zsh/complist
 zmodload zsh/zpty # useful for NeoVim cmp-zsh
 _comp_options+=(globdots)		# Include hidden files.
-
-# Edit line in vim w/ ctrl-e
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line 
 
 
 # Source ZDOTDIR on iCloud Drive
@@ -60,6 +55,8 @@ autoload -Uz compinit
   compinit || compinit -C
 
 zstyle ':completion:*' menu select # select completions with arrow keys
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME/zsh/.zcompcache"
 
 if type brew &>/dev/null; then
   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH

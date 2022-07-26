@@ -2,21 +2,31 @@
 # File: binds.zsh
 # Description: K keybinds zsh shell
 # Author: Kevin
-# Last Modified: 18/03/2022 - 10:19
+# Last Modified: 26 Jul 2022, 11:00
 ############################################
-
 
 # VIM Mode
 bindkey -M vicmd "j" vi-down-line-or-history
 bindkey -M vicmd "k" vi-up-line-or-history
+bindkey -M vicmd "J" vi-join
+bindkey -M vicmd "^l" clear-screen
 
-# Use vim keys in tab complete menu:
-bindkey -M menuselect '^h' vi-backward-char
-bindkey -M menuselect '^k' vi-up-line-or-history
-bindkey -M menuselect '^l' vi-forward-char
-bindkey -M menuselect '^j' vi-down-line-or-history
-bindkey -M menuselect '^[[Z' vi-up-line-or-history
-bindkey -v '^?' backward-delete-char
+# Completion
+bindkey -M menuselect "^h" vi-backward-char
+bindkey -M menuselect "^k" vi-up-line-or-history
+bindkey -M menuselect "^l" vi-forward-char
+bindkey -M menuselect "^j" vi-down-line-or-history
+bindkey -M menuselect "^[[Z" vi-up-line-or-history
+bindkey -M viins "^l" autosuggest-accept
+bindkey -s "^T" "htop^M"
+bindkey -M viins "^X^e" edit-command-line
+
+last_cmd() {
+  zle up-history
+  zle accept-line
+}
+zle -N last_cmd
+bindkey -M viins "^W" last_cmd
 
 # CMD
 bindkey "^[[H" beginning-of-line

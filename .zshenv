@@ -2,7 +2,7 @@
 # File: .zshenv
 # Description: K Zsh Shell Enviroment configuration file
 # Author: Kevin
-# Last Modified: 17 Jul 2022, 11:42
+# Last Modified: 26 Jul 2022, 09:57
 ############################################
 
 # SHELL
@@ -29,7 +29,7 @@ export HOMEBREW_BUNDLE_FILE="$HOME/.MacDotfiles/Brewfile"
 
 # Set default apps
 export EDITOR=nvim
-export VISUAL=vimr
+export VISUAL=nvim
 export BROWSER="/Applications/Safari.app"
 export CS="$HOME/Documents/@M&K/Personal/Kevin/Informatica/"
 export DOTFILES="$HOME/.MacDotfiles"
@@ -82,9 +82,8 @@ export PATH="/usr/local/opt/python/bin:$PATH"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc.py"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/.jupyter"
 
-
 # JAVA
-# java -> setting java17 as default
+# java -> setting latest java as default and java11 as alt
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export JTDLS_HOME="$HOME/.local/share/nvim/lsp_servers/jdtls"
 export CPPFLAGS="-I/usr/local/opt/openjdk/include"
