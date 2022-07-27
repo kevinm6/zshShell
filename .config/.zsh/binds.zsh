@@ -2,7 +2,7 @@
 # File: binds.zsh
 # Description: K keybinds zsh shell
 # Author: Kevin
-# Last Modified: 26 Jul 2022, 11:00
+# Last Modified: 27 Jul 2022, 10:31
 ############################################
 
 # VIM Mode
@@ -26,7 +26,7 @@ last_cmd() {
   zle accept-line
 }
 zle -N last_cmd
-bindkey -M viins "^W" last_cmd
+bindkey -M viins "^q" last_cmd
 
 # CMD
 bindkey "^[[H" beginning-of-line
